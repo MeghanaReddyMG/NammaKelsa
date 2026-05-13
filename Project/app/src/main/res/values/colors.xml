@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Palette -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_variant">#1976D2</color>
+    <color name="secondary">#FF6B6B</color>
+    <color name="secondary_variant">#E55B5B</color>
+
+    <!-- Accent & Status -->
+    <color name="accent">#4CAF50</color>
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1F2937</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="divider">#E5E7EB</color>
+
+    <!-- Legacy / Compatibility (can be removed later) -->
+    <color name="wc_blue">#2196F3</color>
+    <color name="wc_green">#10B981</color>
+    <color name="wc_background">#F5F5F5</color>
+</resources>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#455f87",
+                        "secondary-container": "#6fb2fd",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #faf9fc;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background">
+<!-- Top AppBar (Back context) -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 fixed top-0 bg-surface shadow-sm">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Book Ramesh Kumar</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-primary">info</span>
+</button>
+</header>
+<main class="mt-16 pb-32 px-margin-mobile max-w-2xl mx-auto">
+<!-- Worker Summary Card -->
+<section class="mt-lg">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-container-high flex items-center gap-4">
+<img alt="Ramesh Kumar" class="w-16 h-16 rounded-full object-cover border-2 border-primary-fixed" data-alt="A professional close-up portrait of a skilled worker named Ramesh Kumar, wearing a clean navy blue uniform. The lighting is bright and natural, reflecting a trustworthy and reliable professional atmosphere. The background is a soft, out-of-focus suburban setting that complements the corporate and modern visual style of the application. The image is crisp, with high-contrast detail on the subject's friendly facial expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChztK7sPdB4QnGfekI-40S4w4qrevSF64azWdIZS-NqBkEW-KprgJNjYpa-ytK0ErtpHUiN7oFK49DIafuEXPukz4MbB2sZLjGWDDZf_IZ8fBR1l57U74AGi9P8osFrXMP-1V0fz-x4S4VmqeyH4BW7DlU5CoTKfjlEm0OnBHLc0SCHulAhZw2g6jT1lblRG-Km_66ijnKeWccEcY14fBtT3FzARxEn9sHnjqXqTWVSxB3XVJcjXobpkc6Cw1QC9vMxpcNfoW_BqLO"/>
+<div>
+<h2 class="font-label-lg text-label-lg text-on-surface">Ramesh Kumar</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Professional Electrician</p>
+<div class="flex items-center gap-1 mt-xs text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.9 (124 reviews)</span>
+<span class="mx-2 text-outline-variant">•</span>
+<span class="font-label-lg text-label-lg text-primary">₹450/hr</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Form -->
+<form class="mt-lg space-y-xl">
+<!-- Date & Time Selection -->
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Date</label>
+<div class="relative">
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary outline-none text-on-surface font-body-md" type="date"/>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Start Time</label>
+<div class="relative">
+<input class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary outline-none text-on-surface font-body-md" type="time"/>
+</div>
+</div>
+</div>
+<!-- Duration Selection -->
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Estimated Duration</label>
+<select class="w-full h-12 px-md rounded-lg border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary outline-none text-on-surface font-body-md appearance-none">
+<option>1 Hour (Min. Booking)</option>
+<option>2 Hours</option>
+<option>3 Hours</option>
+<option>4 Hours</option>
+<option>Full Day (8 Hours)</option>
+</select>
+</div>
+<!-- Service Address Radio -->
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Service Address</label>
+<div class="space-y-sm">
+<label class="flex items-center p-md bg-surface-container-lowest border border-outline-variant rounded-xl cursor-pointer hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-5 h-5 text-primary focus:ring-primary border-outline" name="address" type="radio"/>
+<div class="ml-4">
+<span class="block font-label-lg text-label-lg text-on-surface">Home</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">B-402, Skyline Residency, Outer Ring Road</span>
+</div>
+</label>
+<label class="flex items-center p-md bg-surface-container-lowest border border-outline-variant rounded-xl cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="w-5 h-5 text-primary focus:ring-primary border-outline" name="address" type="radio"/>
+<div class="ml-4">
+<span class="block font-label-lg text-label-lg text-on-surface">Office</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">Tech Park East, Block C, 4th Floor</span>
+</div>
+</label>
+<button class="flex items-center gap-2 text-primary font-label-lg text-label-lg mt-2 px-1" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        Add New Address
+                    </button>
+</div>
+</div>
+<!-- Work Description -->
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Work Description</label>
+<textarea class="w-full p-md rounded-lg border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:border-primary outline-none text-on-surface font-body-md" placeholder="Briefly describe the task (e.g., Short circuit in living room, ceiling fan installation...)" rows="4"></textarea>
+</div>
+<!-- Photo Upload Grid -->
+<div class="space-y-sm">
+<label class="font-label-lg text-label-lg text-on-surface-variant px-1">Upload Reference Photos (Optional)</label>
+<div class="grid grid-cols-4 gap-sm">
+<button class="aspect-square border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center text-outline hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined">add_a_photo</span>
+<span class="text-[10px] mt-1">Add</span>
+</button>
+<div class="relative aspect-square rounded-lg overflow-hidden bg-surface-container-high group">
+<img alt="Electrical Board" class="w-full h-full object-cover" data-alt="A detailed, clear photograph showing a residential electrical circuit breaker panel and wiring inside a modern home. The lighting is bright and industrial, clearly displaying the switches and wires for reference. The image is framed as a close-up, providing professional clarity for a service technician to understand the task. The overall aesthetic is clean and practical, fitting the digital utility style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBCQcMCVfOTlJ5Jtr8gH7odpg0D6Ufqo6TLdpsrqGyAkfJWsXAGzY2E1K1viu2IsF_DNDhUrVBV9y_EhK-AqRlBoD1y1OBOQxR-DD8nf7Iou0cbk-lQiDEI6jn1vIAVAo-9yw34TT8OPkhD5BY1Z_4Vbq_QlVrRbcqmTG0yRWxqCT7qqly4lWkp2xzel82wPFQsRKn_BAonZSN-wxoQDiBRyn7Y8_ray-s1d9UnGpAssvjl5wnPzZRtXX59I-pE44avuw1HHbEIM1"/>
+<button class="absolute top-1 right-1 bg-on-surface/50 rounded-full p-0.5 text-white">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cost Summary Card (Asymmetric Bento-like style) -->
+<div class="bg-primary-container text-on-primary rounded-2xl p-lg overflow-hidden relative shadow-lg">
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<p class="font-label-md text-label-md text-on-primary-container uppercase tracking-wider mb-xs">Estimated Total</p>
+<h3 class="font-headline-lg text-headline-lg text-white">₹450.00</h3>
+<p class="font-body-md text-body-md text-on-primary-container mt-1">Final amount based on actual hours</p>
+</div>
+<div class="text-right">
+<div class="bg-secondary px-3 py-1 rounded-full text-[10px] font-bold inline-block mb-2">TAX INCLUDED</div>
+<p class="font-body-md text-body-md text-on-primary-container">₹450 x 1 hr</p>
+</div>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+</div>
+</form>
+</main>
+<!-- Footer Action -->
+<footer class="fixed bottom-0 left-0 w-full z-50 px-margin-mobile py-md bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex items-center justify-center">
+<button class="w-full max-w-2xl bg-secondary text-on-primary h-14 rounded-xl font-headline-sm text-headline-sm font-bold shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+            Confirm Booking
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</footer>
+</body></html>

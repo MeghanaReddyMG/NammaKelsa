@@ -1,0 +1,38 @@
+# Gradle build outputs
+/.gradle/
+/build/
+**/build/
+
+# Gradle caches (local project-level)
+/caches/
+
+# Gradle wrapper downloaded distributions (large binary files)
+/wrapper/dists/
+
+# Gradle daemon logs
+/daemon/
+
+# Kotlin compiler profiles
+/kotlin-profile/
+
+# Native binaries
+/native/
+
+# Local configuration (contains SDK path, should not be committed)
+local.properties
+
+# Android Studio / IntelliJ IDEA
+/.idea/
+*.iml
+*.iws
+*.ipr
+
+# Kotlin compiler output
+/.kotlin/
+
+# Temporary files
+/.tmp/
+
+# OS files
+.DS_Store
+Thumbs.db

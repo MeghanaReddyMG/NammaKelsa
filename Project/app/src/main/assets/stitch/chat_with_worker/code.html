@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WorkConnect Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c4c6cf",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#edbf7f",
+                      "surface-variant": "#e3e2e6",
+                      "outline": "#74777f",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#00497e",
+                      "surface-dim": "#dad9dd",
+                      "surface-container": "#eeedf1",
+                      "inverse-primary": "#adc8f5",
+                      "on-surface": "#1a1c1e",
+                      "background": "#faf9fc",
+                      "primary-container": "#1e3a5f",
+                      "on-primary-container": "#8aa4cf",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#faf9fc",
+                      "on-tertiary-fixed": "#291800",
+                      "tertiary-fixed": "#ffddb2",
+                      "primary": "#022448",
+                      "on-primary-fixed": "#001c3b",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-tint": "#455f87",
+                      "secondary-container": "#6fb2fd",
+                      "on-surface-variant": "#43474e",
+                      "on-secondary-fixed": "#001c37",
+                      "on-primary-fixed-variant": "#2d486d",
+                      "inverse-surface": "#2f3033",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f4f3f7",
+                      "secondary-fixed-dim": "#a0caff",
+                      "inverse-on-surface": "#f1f0f4",
+                      "surface": "#faf9fc",
+                      "primary-fixed-dim": "#adc8f5",
+                      "on-tertiary-fixed-variant": "#60410c",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#c69b5f",
+                      "tertiary": "#341f00",
+                      "on-secondary-container": "#004375",
+                      "tertiary-container": "#503300",
+                      "on-background": "#1a1c1e",
+                      "surface-container-highest": "#e3e2e6",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e9e7eb",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#d2e4ff",
+                      "secondary": "#0061a5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "md": "16px",
+                      "gutter-mobile": "12px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "headline-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:bg-surface-variant transition-colors p-sm rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex items-center gap-sm">
+<div class="relative">
+<img alt="Worker Portrait" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a skilled construction professional wearing a clean safety vest. The background is a blurred architectural site with soft morning light. The visual style is crisp and corporate, using a palette of deep blues and clean whites to communicate reliability and professional expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvOdaw-vy-9YE4TnoW20m8IFsGDw5lU6AGsOTPpS6C9YfIDCshVkKLPq9aS_LxEMKjiHsyHoifae-KNM-63jtKuqJR1Mpf-MiVgcmqAgbQubFEgVVITdQeDRUS2seFD0ca-pD91aVHR2fJ8BvMjm0OecA_zBGm0OAX4iZ8jdcinVEx4JyDUPU6FXXsxoDwclGNtEV78c2ciyO4_xBvWr6_hRLPictvw9IYMdXpLF7nzvZQpWHHMVno1yLWMwCtKLZy1ypLmyTcXyDg"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-surface rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-label-lg text-on-surface leading-tight">Marcus Thompson</span>
+<span class="text-label-md text-on-surface-variant">ID: #WC-98231 • Accepted</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-xs">
+<button class="text-primary hover:bg-surface-variant transition-colors p-sm rounded-full flex items-center justify-center active:opacity-80 active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-variant transition-colors p-sm rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto px-margin-mobile py-lg flex flex-col gap-lg bg-background">
+<!-- Date Divider -->
+<div class="flex justify-center">
+<span class="bg-surface-container-high px-md py-xs rounded-full text-label-md text-on-surface-variant">
+                Today, Oct 24
+            </span>
+</div>
+<!-- Received Message Block -->
+<div class="flex flex-col items-start gap-xs max-w-[85%]">
+<div class="flex items-end gap-sm">
+<div class="bg-surface-variant text-on-surface p-md rounded-xl rounded-bl-none shadow-sm">
+<p class="font-body-md">Hello! I'm confirmed for the plumbing repair at 2:00 PM today. I've just loaded my tools and I'm heading your way.</p>
+</div>
+</div>
+<span class="text-label-md text-outline px-sm">1:15 PM</span>
+</div>
+<!-- Sent Message Block -->
+<div class="flex flex-col items-end gap-xs self-end max-w-[85%]">
+<div class="bg-primary text-on-primary p-md rounded-xl rounded-br-none shadow-sm">
+<p class="font-body-md">Great, thanks Marcus. The gate code is 4492. Please park in space #12 near the main entrance.</p>
+</div>
+<div class="flex items-center gap-xs px-sm">
+<span class="text-label-md text-outline">1:18 PM</span>
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="done_all" data-weight="fill" style="font-variation-settings: 'FILL' 1;">done_all</span>
+</div>
+</div>
+<!-- System Alert / Context Card -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-md flex items-start gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+<div class="flex flex-col gap-xs">
+<span class="font-label-lg text-on-surface">Job Context: Bathroom Leak</span>
+<p class="text-body-md text-on-surface-variant">Marcus has requested access to the basement shut-off valve upon arrival.</p>
+</div>
+</div>
+<!-- Image Message (Received) -->
+<div class="flex flex-col items-start gap-xs max-w-[85%]">
+<div class="bg-surface-variant p-sm rounded-xl rounded-bl-none shadow-sm">
+<img alt="Tool Box" class="w-full h-48 object-cover rounded-lg mb-sm" data-alt="A professional-grade open toolbox filled with high-quality plumbing and mechanical tools, arranged neatly on the floor of a clean service van. The lighting is bright and industrial, emphasizing a mood of readiness and professional organization. The image uses a clean, high-contrast aesthetic to match a modern corporate UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXFBa4PR0jJPX0H6FnFUNv1XU0WXjHLCRS0hODhCo9PD8n7xNj7qrMw-JJbEnLOy2KchW11moNhdPBEYH1kvzef09f68PbqbuV9_QTDF2xabtEEJ5_DoVvsY8M2tLbpv6cZ1cmRKH29An4kEuKw7fvGZc7Iu6yQnkTOMk_nIuy2dAx6OzeC7-aECmohgnYCn1W3CWlkok1HG0WmZqH8vubz8T8k7p2C8jUF03mm1otBL0dwoTiJhxnqHlsbP9eCilrf5yQyUVFA1zN"/>
+<p class="font-body-md px-xs text-on-surface">Just double-checking I have the specific industrial wrench for that valve type. All set!</p>
+</div>
+<span class="text-label-md text-outline px-sm">1:22 PM</span>
+</div>
+<!-- Sent Message Block -->
+<div class="flex flex-col items-end gap-xs self-end max-w-[85%]">
+<div class="bg-primary text-on-primary p-md rounded-xl rounded-br-none shadow-sm">
+<p class="font-body-md">Perfect. See you soon!</p>
+</div>
+<div class="flex items-center gap-xs px-sm">
+<span class="text-label-md text-outline">1:24 PM</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant" data-icon="done">done</span>
+</div>
+</div>
+</main>
+<!-- Chat Input Area -->
+<div class="bg-surface border-t border-outline-variant px-margin-mobile py-md flex items-end gap-sm sticky bottom-0 z-50">
+<button class="bg-surface-container-high text-on-surface-variant p-md rounded-full flex items-center justify-center hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</button>
+<div class="flex-1 bg-surface-container-lowest border border-outline-variant rounded-xl px-md py-sm flex items-center gap-sm">
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-body-md text-on-surface resize-none py-1 h-6 max-h-32" placeholder="Type a message..." rows="1"></textarea>
+<button class="text-primary hover:bg-surface-variant p-xs rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+</button>
+</div>
+<button class="bg-secondary text-on-secondary p-md rounded-full flex items-center justify-center shadow-lg hover:opacity-90 active:scale-90 duration-200 transition-all">
+<span class="material-symbols-outlined" data-icon="send" data-weight="fill" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</body></html>

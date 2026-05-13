@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c6cf",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#edbf7f",
+                    "surface-variant": "#e3e2e6",
+                    "outline": "#74777f",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#00497e",
+                    "surface-dim": "#dad9dd",
+                    "surface-container": "#eeedf1",
+                    "inverse-primary": "#adc8f5",
+                    "on-surface": "#1a1c1e",
+                    "background": "#faf9fc",
+                    "primary-container": "#1e3a5f",
+                    "on-primary-container": "#8aa4cf",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#faf9fc",
+                    "on-tertiary-fixed": "#291800",
+                    "tertiary-fixed": "#ffddb2",
+                    "primary": "#022448",
+                    "on-primary-fixed": "#001c3b",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-tint": "#455f87",
+                    "secondary-container": "#6fb2fd",
+                    "on-surface-variant": "#43474e",
+                    "on-secondary-fixed": "#001c37",
+                    "on-primary-fixed-variant": "#2d486d",
+                    "inverse-surface": "#2f3033",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f4f3f7",
+                    "secondary-fixed-dim": "#a0caff",
+                    "inverse-on-surface": "#f1f0f4",
+                    "surface": "#faf9fc",
+                    "primary-fixed-dim": "#adc8f5",
+                    "on-tertiary-fixed-variant": "#60410c",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#c69b5f",
+                    "tertiary": "#341f00",
+                    "on-secondary-container": "#004375",
+                    "tertiary-container": "#503300",
+                    "on-background": "#1a1c1e",
+                    "surface-container-highest": "#e3e2e6",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e9e7eb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d2e4ff",
+                    "secondary": "#0061a5",
+                    "cta-orange": "#FF6B35"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "gutter-mobile": "12px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            background: #e3e2e6;
+            height: 6px;
+            border-radius: 3px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -5px;
+            background-color: #022448;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- Top AppBar (Back Action prioritizes suppressing global nav) -->
+<header class="bg-surface-container-low flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0 shadow-sm">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant transition-colors rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Write Review</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant transition-colors rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</header>
+<main class="max-w-xl mx-auto px-margin-mobile pt-lg space-y-lg">
+<!-- Header Section -->
+<section class="flex flex-col items-center text-center space-y-md">
+<div class="relative">
+<img alt="Ramesh Kumar" class="w-24 h-24 rounded-full object-cover border-4 border-surface-container shadow-sm" data-alt="A professional headshot of a skilled electrician named Ramesh Kumar, dressed in a clean work uniform against a neutral workshop background. The lighting is bright and clear, reflecting a professional and trustworthy worker in a modern service industry setting. The color palette is composed of soft greys and blues, aligning with the corporate and reliable WorkConnect brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfbswD-jA86-4pirvemwECCdpkAQ7on0TtVjCpACIUxf_ASkKikS5jKUPeRfJaKa6e7z-3lqJIsDfLcZfUTIJCUsg-rQE7_3Va8htgja95t9cyT2xIkCcDgsnPaLb-ZMB4iZsxZOZGDDMoTTQd-W2_e8bBmJZpG-W9OCvksEBoEEEqruoltuX_cHkBPwRk-zn0xifEgNypER3fPSWXtyjHpat52ez-pkFv_9M_TTWqfO6dIqBiSJ0N-xWTqnudl1PBQ5X6YQ4ktDqZ"/>
+<div class="absolute bottom-0 right-0 bg-secondary-container p-1 rounded-full border-2 border-surface">
+<span class="material-symbols-outlined text-[16px] text-on-secondary-container fill-icon">verified</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Rate your experience with Ramesh Kumar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your feedback helps the community find reliable professionals.</p>
+</section>
+<!-- Ratings Section: Bento Grid Style -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-variant flex flex-col justify-between">
+<div class="flex items-center justify-between mb-sm">
+<span class="font-label-lg text-label-lg text-on-surface">Overall Rating</span>
+<div class="flex text-cta-orange">
+<span class="material-symbols-outlined fill-icon">star</span>
+<span class="material-symbols-outlined fill-icon">star</span>
+<span class="material-symbols-outlined fill-icon">star</span>
+<span class="material-symbols-outlined fill-icon">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+</div>
+<input class="w-full h-1.5 rounded-lg bg-surface-variant accent-primary" max="5" min="1" step="1" type="range" value="4"/>
+</div>
+<!-- Detailed Metrics -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-variant space-y-md md:row-span-2">
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant">Punctuality</label>
+<span class="font-label-md text-label-md font-bold text-primary">4.0</span>
+</div>
+<input class="w-full" type="range"/>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant">Quality of Work</label>
+<span class="font-label-md text-label-md font-bold text-primary">5.0</span>
+</div>
+<input class="w-full" type="range" value="5"/>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant">Behavior</label>
+<span class="font-label-md text-label-md font-bold text-primary">4.5</span>
+</div>
+<input class="w-full" type="range" value="4.5"/>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant">Value for Money</label>
+<span class="font-label-md text-label-md font-bold text-primary">4.8</span>
+</div>
+<input class="w-full" type="range" value="4.8"/>
+</div>
+</div>
+<!-- Review Text Area -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-variant">
+<label class="block font-label-lg text-label-lg text-on-surface mb-sm">Share your experience...</label>
+<textarea class="w-full p-sm bg-transparent border border-outline-variant rounded-lg font-body-md text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all resize-none" placeholder="Tell us what went well or what could be improved..." rows="4"></textarea>
+<div class="flex justify-end mt-xs">
+<span class="text-[10px] font-label-md text-outline">0 / 500 characters</span>
+</div>
+</div>
+</section>
+<!-- Photos Section -->
+<section class="space-y-sm">
+<h3 class="font-label-lg text-label-lg text-on-surface">Add Photos (Optional)</h3>
+<div class="grid grid-cols-4 sm:grid-cols-5 gap-sm">
+<!-- Upload Button -->
+<button class="aspect-square border-2 border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-headline-sm">add_a_photo</span>
+<span class="text-[10px] font-label-md mt-1">Upload</span>
+</button>
+<!-- Placeholder Image -->
+<div class="aspect-square rounded-xl bg-surface-variant overflow-hidden relative group">
+<img alt="Work proof" class="w-full h-full object-cover" data-alt="A detailed close-up shot of a neatly wired electrical panel in a residential home. The wiring is professional, color-coded, and organized, showcasing high-quality workmanship. The lighting is crisp and even, emphasizing the clean and safe installation. The image maintains a high-contrast, professional aesthetic with sharp details and realistic textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw2BNM6GZlLsHBwxJrfmGul-nTfbZJU3WCKlpPhwz37pZfq5HwwvKzkEGQ7SOy1UOMboB7FsGmjFIs3MPPZcL5XZ1Pjeh53vDGdPB5McbhZUFxyR3KsaVloGIqiUNCfT0Ixvp0G2GCKU24BnTGAdMfXm4dEoPo9W4aSnfBlcFQJw2pMeKWZtmgbZmauZr1uN5ur20Mbc-JVkwcXznyqehm-qrH6qusk6WRo4E4gAaX6TCg-HT6Ufj4Rv7sTbVmB-Dnb7VBS8DypCoe"/>
+<button class="absolute top-1 right-1 bg-surface/80 rounded-full p-0.5 text-error shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">cancel</span>
+</button>
+</div>
+<div class="aspect-square rounded-xl bg-surface-variant overflow-hidden relative group">
+<img alt="Tools proof" class="w-full h-full object-cover" data-alt="A clean and modern indoor setting showing a technician’s toolbag open on a protected floor surface. The room is brightly lit with natural morning light coming from a nearby window, creating an atmosphere of professional service and care for the customer's property. The style is minimalist and high-end, utilizing soft shadows and clear focus on the tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf7-SMSgKoGpsFDnhMzEsflk2j2UenDpu3R1KiPNDmbs0l7aA_O0khXORzxn-kSqfMseYJ2BqGvY9FiyCuoKNJdyGUCUpaRzaJlFd8lcpUPyy_f9xSOS8sfbnY97nhG_-_vo-Z8GTNdduF_iQSK_VeSaXfeQQRlta44-nsJRsWP_yundWj3f4M-zak4XAoQukpWvYk59Ez6DpOzeTs2gG1s7zlrhJvdysOGivPB7YvR-So_OvHmIznp41Vg9MbOTwyW6_S8q0iQQ1h"/>
+<button class="absolute top-1 right-1 bg-surface/80 rounded-full p-0.5 text-error shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">cancel</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Status Chips for Quick Feedback -->
+<section class="space-y-sm">
+<h3 class="font-label-lg text-label-lg text-on-surface">Highlights</h3>
+<div class="flex flex-wrap gap-sm">
+<button class="px-md py-sm bg-secondary-container text-on-secondary-container rounded-full text-label-md font-semibold hover:opacity-90 transition-opacity">Professional</button>
+<button class="px-md py-sm bg-surface-container-highest text-on-surface-variant rounded-full text-label-md hover:bg-outline-variant transition-colors">On-time</button>
+<button class="px-md py-sm bg-surface-container-highest text-on-surface-variant rounded-full text-label-md hover:bg-outline-variant transition-colors">Great Value</button>
+<button class="px-md py-sm bg-surface-container-highest text-on-surface-variant rounded-full text-label-md hover:bg-outline-variant transition-colors">Skilled</button>
+<button class="px-md py-sm bg-surface-container-highest text-on-surface-variant rounded-full text-label-md hover:bg-outline-variant transition-colors">Polite</button>
+</div>
+</section>
+</main>
+<!-- Fixed Action Footer -->
+<footer class="fixed bottom-0 left-0 w-full bg-surface p-md border-t border-outline-variant flex gap-md items-center justify-between z-50">
+<div class="hidden sm:block">
+<p class="font-label-md text-outline">Submission is final</p>
+<p class="font-body-md text-on-surface-variant">Review will be public</p>
+</div>
+<button class="flex-1 sm:flex-none sm:min-w-[200px] h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-sm active:scale-95 transition-transform">
+            Submit Review
+            <span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</footer>
+</body></html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#c4c6cf",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#edbf7f",
+            "surface-variant": "#e3e2e6",
+            "outline": "#74777f",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#00497e",
+            "surface-dim": "#dad9dd",
+            "surface-container": "#eeedf1",
+            "inverse-primary": "#adc8f5",
+            "on-surface": "#1a1c1e",
+            "background": "#faf9fc",
+            "primary-container": "#1e3a5f",
+            "on-primary-container": "#8aa4cf",
+            "error-container": "#ffdad6",
+            "surface-bright": "#faf9fc",
+            "on-tertiary-fixed": "#291800",
+            "tertiary-fixed": "#ffddb2",
+            "primary": "#022448",
+            "on-primary-fixed": "#001c3b",
+            "primary-fixed": "#d5e3ff",
+            "surface-tint": "#455f87",
+            "secondary-container": "#6fb2fd",
+            "on-surface-variant": "#43474e",
+            "on-secondary-fixed": "#001c37",
+            "on-primary-fixed-variant": "#2d486d",
+            "inverse-surface": "#2f3033",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f4f3f7",
+            "secondary-fixed-dim": "#a0caff",
+            "inverse-on-surface": "#f1f0f4",
+            "surface": "#faf9fc",
+            "primary-fixed-dim": "#adc8f5",
+            "on-tertiary-fixed-variant": "#60410c",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#c69b5f",
+            "tertiary": "#341f00",
+            "on-secondary-container": "#004375",
+            "tertiary-container": "#503300",
+            "on-background": "#1a1c1e",
+            "surface-container-highest": "#e3e2e6",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#e9e7eb",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#d2e4ff",
+            "secondary": "#0061a5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "16px",
+            "md": "16px",
+            "gutter-mobile": "12px",
+            "xl": "32px",
+            "xs": "4px",
+            "lg": "24px",
+            "sm": "8px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .fill-icon {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">location_on</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">WorkConnect</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-margin-mobile pt-lg max-w-4xl mx-auto">
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Saved Workers</h2>
+<span class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">3 Favorites</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col overflow-hidden border border-outline-variant/30">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A professional male electrician in his 30s wearing a clean blue uniform, standing in a brightly lit modern residential interior. He has a friendly, trustworthy expression and is holding a professional tool belt. The lighting is crisp and natural, emphasizing reliability and professional service in a light-mode UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE3Z3bm5rsYQ_DMKvD_L40FT8FGCZM9kywAVjq5AIwC92za53fcJejjbZowvl3ot3FPOGC68FaY4Xcl2EZ514z-1-ZhwMj2EK5ZU6dWGpQ0orwL2lKPIaIW3hEsFjx7fVaURNNs10lWbVuRbBvKSHwNFmU6zVq92sJ40TL5Bhb3gx0WGBoId-pCq0X4ChpJ-qHpzbwbmryErDN6Lg-nhoFqu08g_NQPDi_PxaQobmdQzsWhckyzPs62HEpXk726QL1O6FO8mJpUn8L"/>
+<button class="absolute top-sm right-sm bg-white/90 p-2 rounded-full shadow-sm text-error active:scale-95 duration-100">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-sm left-sm">
+<span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Available Now</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">Marcus Thompson</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-[18px] fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.9</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Master Electrician</p>
+<div class="mt-auto">
+<div class="flex items-baseline gap-1 mb-md">
+<span class="font-headline-sm text-headline-sm text-primary">$45</span>
+<span class="font-label-md text-label-md text-outline">/ day</span>
+</div>
+<button class="w-full py-2.5 bg-[#1E3A5F] text-white rounded-xl font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all">
+              Book Now
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col overflow-hidden border border-outline-variant/30 opacity-90">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover filter grayscale-[20%]" data-alt="A professional female landscape designer in her late 20s, wearing a modern work apron and holding garden blueprints. She is outdoors in a lush, well-maintained contemporary garden during the golden hour. The sunlight is warm and soft, creating an atmosphere of expertise and creative professionalism for a corporate labor marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmWXwrdsSBmaUag8dB0ktRsoyyp1QICWRUcNhMDKkTyPXr24DEID4yK5OvET-A1NN2rxquvRKeKujBhlHKNWTE0dKzCR0kOoddbPxW489z9UuAWYuAOic9hotgKO7CAB8mNBtJdiQOPzbqqMg0DzefWHC6RNYvckqVcQp4W0CHUfKGtqvE9qnhUOXwrcab5bVn-b-1tM4Ukviu3R64OM3gtfah_yULJGyOGbE7Q9JqObOKuJi5jZOFK4_DTThOZW7DK38xhgi4ZDxp"/>
+<button class="absolute top-sm right-sm bg-white/90 p-2 rounded-full shadow-sm text-error active:scale-95 duration-100">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-sm left-sm">
+<span class="bg-outline-variant text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Booked Today</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">Elena Rodriguez</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-[18px] fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">4.8</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Landscape Gardener</p>
+<div class="mt-auto">
+<div class="flex items-baseline gap-1 mb-md">
+<span class="font-headline-sm text-headline-sm text-primary">$38</span>
+<span class="font-label-md text-label-md text-outline">/ day</span>
+</div>
+<button class="w-full py-2.5 border border-primary text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-variant transition-all">
+              View Details
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col overflow-hidden border border-outline-variant/30">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A focused male professional cleaner in his 40s wearing a high-visibility polo shirt and gloves, cleaning a minimalist glass-walled office space. The environment is clinical, bright, and modern with soft daylight. The image conveys thoroughness, attention to detail, and industrial-grade service standards in a high-contrast corporate UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCTHnOQq6HR5AUjCMNoJjmJSUKpr_jeY5bIJj6da1Nm-mEyUXjRSr4DqK4aXPXQbM1XwU2QFyDnQqPWv0fClBbHJfCCEcA9cGKd68BMipzwJHeNZIcg--CLRJUzahmaOcHv5gLzxcJ4qLehXiWiuTBZalfpi68OJiSQiSlxDaDauIBKKRaZ4_8oS5O6stDqIsyj4l7AAPPhMJ34LALuT-NnlmrSi8lQrNCJekDdh6qIKLXkyGz4K5gCjIZnD02Vzy1atPDWRG5KTw7"/>
+<button class="absolute top-sm right-sm bg-white/90 p-2 rounded-full shadow-sm text-error active:scale-95 duration-100">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-sm left-sm">
+<span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Available Now</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">David Chen</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-[18px] fill-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md">5.0</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">Professional Cleaner</p>
+<div class="mt-auto">
+<div class="flex items-baseline gap-1 mb-md">
+<span class="font-headline-sm text-headline-sm text-primary">$32</span>
+<span class="font-label-md text-label-md text-outline">/ day</span>
+</div>
+<button class="w-full py-2.5 bg-[#FF6B35] text-white rounded-xl font-label-lg text-label-lg hover:opacity-90 active:scale-95 transition-all">
+              Book Now
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- This section is hidden unless the state was empty -->
+<div class="hidden flex-col items-center justify-center py-20 text-center">
+<div class="bg-surface-container rounded-full p-8 mb-lg">
+<span class="material-symbols-outlined text-outline text-6xl">favorite</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm">No saved workers yet</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xs mx-auto mb-lg">
+        Tap the heart icon on worker profiles to save them here for quick booking.
+      </p>
+<button class="bg-[#1E3A5F] text-white px-xl py-3 rounded-xl font-label-lg text-label-lg shadow-sm">
+        Explore Workers
+      </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface dark:bg-on-surface shadow-lg rounded-t-xl border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors cursor-pointer w-1/4">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors cursor-pointer w-1/4">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-5 py-1 scale-90 duration-200 ease-in-out cursor-pointer w-1/4">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors cursor-pointer w-1/4">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</nav>
+</body></html>

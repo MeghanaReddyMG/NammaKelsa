@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WorkConnect - Customer Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#455f87",
+                        "secondary-container": "#6fb2fd",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 fixed top-0 left-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="location_on">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">Location</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">Hyderabad</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">WorkConnect</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-20 pb-24 px-margin-mobile max-w-md mx-auto overflow-x-hidden">
+<!-- Greeting -->
+<section class="mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Hi, Priya! 👋</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">What service do you need?</p>
+</section>
+<!-- Search Bar -->
+<section class="mb-lg">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest rounded-xl border-none focus:ring-2 focus:ring-primary text-body-md shadow-sm outline-none transition-shadow" placeholder="Search for Electrician, Plumber..." type="text"/>
+</div>
+</section>
+<!-- Categories Grid (3-column) -->
+<section class="mb-xl">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Categories</h2>
+<button class="text-primary font-label-lg text-label-lg">View All</button>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-secondary-container rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="electric_bolt">electric_bolt</span>
+</div>
+<span class="font-label-md text-label-md">Electrician</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="plumbing">plumbing</span>
+</div>
+<span class="font-label-md text-label-md">Plumber</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="carpenter">carpenter</span>
+</div>
+<span class="font-label-md text-label-md">Carpenter</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<span class="font-label-md text-label-md">Cleaning</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="imagesearch_roller">imagesearch_roller</span>
+</div>
+<span class="font-label-md text-label-md">Painter</span>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="w-full aspect-square bg-surface-container-highest rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="construction">construction</span>
+</div>
+<span class="font-label-md text-label-md">More</span>
+</div>
+</div>
+</section>
+<!-- Top Rated Workers (Horizontal Scroll) -->
+<section class="mb-xl -mx-margin-mobile">
+<div class="px-margin-mobile flex justify-between items-center mb-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Top Rated Workers</h2>
+</div>
+<div class="flex overflow-x-auto gap-md px-margin-mobile hide-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[280px] bg-surface rounded-xl shadow-sm border border-outline-variant p-md flex flex-col gap-sm">
+<div class="flex gap-md">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="A professional male electrician in a clean blue uniform smiling warmly for a profile photo. The background is a soft-focus workshop with warm lighting, evoking trust and corporate professionalism in a modern light-mode interface. He looks reliable and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaVx5SjjKJpJyXkjUmLhuMZgDLkBt5ev1uVeqBgUE2c8irvLSp1n4IZ3cMd-P0PfaBc9LgaCopMklvJYHKjsOsN_PgoBX37sNJtyJw4EIFqmmz_L9D-UkU_LjGGRj3QHxA0mW9NJ_U9op2bTL5Rb7-JUG8FaefwHbYBVtL-5A1mlZ-d2ysiTl69yFk6IttHujJJ0GrC3zZeZvXPVAsphrUCcpsU2yCwahakabKi2l8tm3gmTHHSJbhbBn4aN5FYyMUZi-0_PGj8W92"/>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface">Rajesh Kumar</h3>
+<p class="text-body-md text-on-surface-variant">Senior Electrician</p>
+<div class="flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-bold">4.9</span>
+<span class="text-label-md text-outline">(120+)</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<span class="text-primary font-bold">₹499 <span class="text-body-md font-normal text-on-surface-variant">/ hr</span></span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md">Book Now</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] bg-surface rounded-xl shadow-sm border border-outline-variant p-md flex flex-col gap-sm">
+<div class="flex gap-md">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="A confident professional female technician wearing a high-quality grey work vest. She is posing in a bright, modern interior setting with natural light. The aesthetic is clean, corporate, and focuses on professional reliability and high-end service standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlY6V7Hslli3qcG0LqRqmGned3FOpQFpXZsx8Jrc8YL6s-sXFjYi4guWsjtvNts40K31z5gFlPKz-Xj5JNb4RCstv6LK5SIpDtZAh4W4q0owqqOAObJOy02Zgb_3NWShHqY61br1-YVNNR79x0DdKwHx2ZrtDYUetAz6Zuw-6_2eZ4CcfAfvJriabR36e7wPidtZVdbBl6b0HcgqqauU-i56YBJFJSPmN4mwr8I9_5ABKki_cIST_zv-iMkFVDSjWP8DRf3EW2RdaD"/>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-on-surface">Anita Sharma</h3>
+<p class="text-body-md text-on-surface-variant">Home Cleaning Expert</p>
+<div class="flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-bold">4.8</span>
+<span class="text-label-md text-outline">(85+)</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<span class="text-primary font-bold">₹299 <span class="text-body-md font-normal text-on-surface-variant">/ hr</span></span>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md">Book Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Nearby Workers (Vertical List) -->
+<section class="mb-lg">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Nearby Workers</h2>
+<button class="text-primary font-label-lg text-label-lg">Filter</button>
+</div>
+<div class="flex flex-col gap-md">
+<!-- Worker 1 -->
+<div class="flex gap-md p-md bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Close up portrait of a skilled male plumber in professional workwear. He is set against a clean, architectural background with cool daylight. The image has a crisp, high-contrast modern look, emphasizing technical expertise and readiness to work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8IYBRWwHWka8QWJnj-h-C3RAF1-HgV4hFhx_sZCs-cG7xsbhIRYeH8W4iiE-sJQc4j5e4SXmYDW1TCes8CHz93kuNYVAJZv_t-rQsdPjS1YyCxufRs7pQBKc2jbT2LnxPGwTYQzuQfDWCvfoDgcJHRqmk4LjauUpD-9aATijw6aq5v6rZwipbWHx7uT-XpUsTI8JJfEDQTNQ-IG6fI0zRd2DZChnr5QHm95oGFoZs4UQMkakvgnq4tUeZSnW6laebDoVIwXBDwROt"/>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Vikram Singh</h3>
+<p class="text-label-md text-on-surface-variant">Plumber • 1.2 km away</p>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container/20 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-bold text-primary">4.7</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<span class="text-on-surface font-bold">₹350/hr</span>
+<span class="text-label-md text-primary font-semibold">View Details</span>
+</div>
+</div>
+</div>
+<!-- Worker 2 -->
+<div class="flex gap-md p-md bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="A friendly looking carpenter holding a measuring tool, wearing professional denim overalls. He is in a brightly lit woodworking studio with soft ambient shadows. The overall feel is one of craftsmanship, institutional trust, and modern enterprise utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdBhADJYTvQCK2GqjRnb5BHAVJw1I-lP1T8QF_Ri6t_TsB-n-w73dIn96Ww3LBTxnt2He1wxNqnpl3QqB-OBn5t1D3_-uYoV0YixGl6k-tU5OszMbg1nEsL5U0CbaCOOmxHpCll5uyBpU-2VnAwApAL4W_Wuy2xiNUZVYtVXaX15r2pLNtCJrIFXi7w1gG40dOq8pIcMit-ELWlBCDpHg-DZD5je7PW8-q_v24xn9CS_S3UYF-VmhaiWXBOfJKgehXuEspTA2F3sSq"/>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Suresh Raina</h3>
+<p class="text-label-md text-on-surface-variant">Carpenter • 0.8 km away</p>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container/20 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md font-bold text-primary">4.5</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-sm">
+<span class="text-on-surface font-bold">₹400/hr</span>
+<span class="text-label-md text-primary font-semibold">View Details</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface dark:bg-on-surface shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-5 py-1 scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<!-- FAB (Suppressed on Home by logic, but showing as Contextual if needed - here we won't strictly needed as per rules) -->
+</body></html>

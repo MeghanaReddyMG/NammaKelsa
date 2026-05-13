@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">WorkConnect</span>
+</div>
+<div class="flex items-center">
+<button class="p-2 hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors rounded-full">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-xl mx-auto px-margin-mobile pt-lg space-y-lg">
+<!-- Profile Header -->
+<section class="flex flex-col items-center text-center space-y-md">
+<div class="relative group">
+<img class="w-32 h-32 rounded-full border-4 border-surface-container shadow-md object-cover" data-alt="A professional studio portrait of a friendly Caucasian man in his late 30s with a neat beard and short hair. He is wearing a crisp navy blue shirt against a minimalist, high-key white background. The lighting is soft and even, typical of a modern corporate professional photography session, maintaining a clean and trustworthy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkgHS94xHS974pambJbQ0bTDLPKoBnSlgAHof_eav-kqHjFJHbV_-uI_FsL3UpQW4BGSqbCl0VfzXZ-dYjwOuMRx2HR8PS3KYh-6b-eWTHm6S-1ZfEOmsmSS2p8E9KbToQNqQfo71U_oT7_IzFGXyJmWvfj-RXhoBaIGeHGF4p24j-lpS5jamviSuxxxTPBdoXQ9S_F1nw4CwdD5xeOa372cOpNB9_sIo3b7_sfjiykfFTYMZLb3U_VETkrk94VO7TMtUJsaH-RLw"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Jameson Cooper</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (555) 234-5678</p>
+<p class="font-body-md text-body-md text-on-surface-variant">jameson.cooper@workconnect.com</p>
+</div>
+</section>
+<!-- My Addresses Section -->
+<section class="space-y-sm">
+<div class="flex justify-between items-center mb-xs">
+<h2 class="font-label-lg text-label-lg text-primary uppercase tracking-wider">My Addresses</h2>
+</div>
+<div class="grid grid-cols-1 gap-sm">
+<!-- Home Address Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-variant flex items-start gap-md">
+<div class="bg-primary-container text-on-primary-container p-sm rounded-lg">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Home</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">123 Sunset Boulevard, Apartment 4B, Los Angeles, CA 90028</p>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Office Address Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-surface-variant flex items-start gap-md">
+<div class="bg-secondary-container text-on-secondary-container p-sm rounded-lg">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface">Office</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tech Plaza North, 15th Floor, Suite 1502, San Francisco, CA 94105</p>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Add New Button -->
+<button class="w-full py-md border-2 border-dashed border-outline-variant rounded-xl flex items-center justify-center gap-xs text-primary font-label-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add New Address
+                </button>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-sm">
+<h2 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-xs">Settings</h2>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border border-surface-variant">
+<!-- Notifications -->
+<div class="flex items-center justify-between p-md border-b border-surface-variant">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="font-body-lg text-body-lg">Notifications</span>
+</div>
+<div class="w-12 h-6 bg-secondary-container rounded-full relative p-1 flex items-center justify-end">
+<div class="w-4 h-4 bg-on-primary rounded-full shadow-sm"></div>
+</div>
+</div>
+<!-- Language -->
+<div class="flex items-center justify-between p-md border-b border-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="language">language</span>
+<span class="font-body-lg text-body-lg">Language</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">English (US)</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-center justify-between p-md border-b border-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="description">description</span>
+<span class="font-body-lg text-body-lg">Terms of Service</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Privacy -->
+<div class="flex items-center justify-between p-md border-b border-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="lock">lock</span>
+<span class="font-body-lg text-body-lg">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Help -->
+<div class="flex items-center justify-between p-md border-b border-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="help">help</span>
+<span class="font-body-lg text-body-lg">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- About -->
+<div class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="info">info</span>
+<span class="font-body-lg text-body-lg">About WorkConnect</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Account Actions -->
+<section class="space-y-md pt-md">
+<button class="w-full flex items-center justify-center gap-sm py-md text-error font-label-lg hover:bg-error-container/20 rounded-xl transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </button>
+<button class="w-full flex items-center justify-center gap-sm py-md border-2 border-error text-error font-label-lg hover:bg-error hover:text-on-error rounded-xl transition-all">
+<span class="material-symbols-outlined" data-icon="delete_forever">delete_forever</span>
+                Delete Account
+            </button>
+<p class="text-center font-label-md text-label-md text-outline py-md">App Version 2.4.1 (Build 882)</p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface dark:bg-on-surface shadow-lg rounded-t-xl border-t border-outline-variant">
+<!-- Home -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<!-- Bookings -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</div>
+<!-- Earnings -->
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</div>
+<!-- Profile (Active) -->
+<div class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-5 py-1 scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</nav>
+</body></html>

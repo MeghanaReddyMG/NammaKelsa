@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c6cf",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#edbf7f",
+                    "surface-variant": "#e3e2e6",
+                    "outline": "#74777f",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#00497e",
+                    "surface-dim": "#dad9dd",
+                    "surface-container": "#eeedf1",
+                    "inverse-primary": "#adc8f5",
+                    "on-surface": "#1a1c1e",
+                    "background": "#faf9fc",
+                    "primary-container": "#1e3a5f",
+                    "on-primary-container": "#8aa4cf",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#faf9fc",
+                    "on-tertiary-fixed": "#291800",
+                    "tertiary-fixed": "#ffddb2",
+                    "primary": "#022448",
+                    "on-primary-fixed": "#001c3b",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-tint": "#455f87",
+                    "secondary-container": "#6fb2fd",
+                    "on-surface-variant": "#43474e",
+                    "on-secondary-fixed": "#001c37",
+                    "on-primary-fixed-variant": "#2d486d",
+                    "inverse-surface": "#2f3033",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f4f3f7",
+                    "secondary-fixed-dim": "#a0caff",
+                    "inverse-on-surface": "#f1f0f4",
+                    "surface": "#faf9fc",
+                    "primary-fixed-dim": "#adc8f5",
+                    "on-tertiary-fixed-variant": "#60410c",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#c69b5f",
+                    "tertiary": "#341f00",
+                    "on-secondary-container": "#004375",
+                    "tertiary-container": "#503300",
+                    "on-background": "#1a1c1e",
+                    "surface-container-highest": "#e3e2e6",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e9e7eb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d2e4ff",
+                    "secondary": "#0061a5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "gutter-mobile": "12px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 bg-surface-container-low shadow-sm sticky top-0">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">WorkConnect</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</div>
+</header>
+<main class="flex-grow w-full max-w-lg mx-auto px-margin-mobile py-lg">
+<!-- Progress Section -->
+<section class="mb-xl">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-lg text-label-lg text-primary">Step 4 of 4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Completion: 100%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+</section>
+<!-- Identity Verification Content -->
+<section class="space-y-lg">
+<div class="space-y-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Verify your identity</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Please provide a valid government-issued ID to complete your profile and start accepting jobs.</p>
+</div>
+<!-- Bento Card for Inputs -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant/30 space-y-md">
+<!-- ID Type Selection -->
+<div class="space-y-xs">
+<label class="font-label-lg text-label-lg text-on-surface">ID Type</label>
+<div class="relative">
+<select class="w-full h-12 px-md bg-surface-container rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary appearance-none font-body-md text-on-surface">
+<option value="">Select ID type</option>
+<option value="aadhaar">Aadhaar Card</option>
+<option value="pan">PAN Card</option>
+<option value="voter">Voter ID</option>
+<option value="license">Driving License</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-md pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- ID Number Field -->
+<div class="space-y-xs">
+<label class="font-label-lg text-label-lg text-on-surface">ID Number</label>
+<input class="w-full h-12 px-md bg-surface-container rounded-lg border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-on-surface placeholder:text-outline" placeholder="Enter your ID number" type="text"/>
+</div>
+<!-- ID Photo Upload Area -->
+<div class="space-y-xs">
+<label class="font-label-lg text-label-lg text-on-surface">Upload ID Photo</label>
+<div class="relative group border-2 border-dashed border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center bg-surface hover:bg-surface-container-low transition-colors cursor-pointer min-h-[200px]">
+<div class="absolute inset-0 z-0">
+<img alt="Upload Preview Placeholder" class="w-full h-full object-cover opacity-5 rounded-xl grayscale" data-alt="A clean, professional studio photograph of a generic identification document on a minimalist white surface. The lighting is bright and even, highlighting a modern corporate aesthetic with subtle blue and grey undertones. The scene is calm and structured, representing security and institutional trust for a high-end labor-enterprise application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlMEOpPe5BS2g8ldbQ-N7gx_kicAlayS3waOd1Z2t40AREm42cUC_MyRICQ1dJBIEkeVZWEMeKxyv5q2Y6FbQMf4ag81XjxDm457PTLVqYI9no1096XdWk8d5C_ZabkP6s5vqJTZtA4ZujQQG3XNoT2CMxmq_UYbRMOLYxGN7gFym0MKk6LyOPYqUASysbnA2G6edUB6Tvbskg5c-1oQbXXi5B38xZuSrN9Abr45EKNVq-9YNysLbyemvJSfo5zbyuK0dWOZRGnwcq"/>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_a_photo">add_a_photo</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary">Take a photo or upload</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-xs">Front side of your original ID</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Legal Agreement Section -->
+<div class="flex items-start gap-md p-md bg-surface-container-low rounded-xl">
+<div class="mt-1">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary bg-surface" id="terms" type="checkbox"/>
+</div>
+<label class="font-body-md text-body-md text-on-surface" for="terms">
+                    I agree to the <a class="text-primary font-bold hover:underline" href="#">Terms and Conditions</a> and authorize WorkConnect to verify my identity details for profile activation.
+                </label>
+</div>
+<!-- Action Button -->
+<button class="w-full py-4 bg-[#022448] text-white rounded-xl font-headline-sm text-headline-sm shadow-lg flex items-center justify-center gap-sm active:scale-95 transition-transform">
+                Complete Setup
+                <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</button>
+</section>
+<!-- Informational Footer Info -->
+<footer class="mt-xl text-center">
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+                Your data is encrypted and stored securely
+            </p>
+</footer>
+</main>
+<!-- Bottom Navigation (Filtered to suppress since it's a transactional onboarding flow) -->
+<!-- The Shell Visibility Rule: suppressed during "Step 4 of 4" onboarding flow -->
+</body></html>

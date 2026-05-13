@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WorkConnect - Phone Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#455f87",
+                        "secondary-container": "#6fb2fd",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 bg-surface shadow-sm sticky top-0">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-primary">WorkConnect</span>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</header>
+<main class="flex-1 flex flex-col px-margin-mobile pt-lg max-w-md mx-auto w-full">
+<!-- Illustration Section -->
+<div class="w-full flex justify-center mb-xl">
+<div class="relative w-full aspect-square max-h-[280px] bg-primary-container/10 rounded-[2rem] overflow-hidden flex items-center justify-center p-md">
+<img alt="Illustration of a modern smartphone with a secure shield icon" class="w-4/5 h-4/5 object-contain" data-alt="A stylized 3D digital illustration of a sleek smartphone floating in a minimalist workspace. The phone displays a vibrant shield and checkmark icon representing digital security and verification. The scene is bathed in professional corporate lighting with soft shadows and a clean aesthetic using deep blues and warm orange accents. The background is a soft, out-of-focus office environment that communicates reliability and efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzChHkO0mFiWUnIcCQohgGuqVnI-oISymxZtAVxTwIi9DCKBjHMhrYkJvYNyMv2wKHomTiL7pDRdRZ8EduOF0etR6TNNne_6BFNzMDk2N2J8oUoUblGB2Xh4sirIeEf-bJXv0ihe-AfzsQo-rReKSBstR__3d3ravtxTyqh1yNJ3RCo6A52SiQpJr-OrPbLegFewbtQNXas1syvYYYnIsT-xEwq5s-xUlup1JU-BCELT2HXe8tGcnDReG8PFldMnDFSMW36lrSVjaL"/>
+</div>
+</div>
+<!-- Typography Section -->
+<div class="space-y-sm mb-xl">
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold">Enter your phone number</h1>
+<p class="font-body-md text-on-surface-variant text-[14px]">We'll send you a verification code</p>
+</div>
+<!-- Input Field Section -->
+<div class="space-y-md">
+<div class="group relative flex items-center w-full bg-surface border-2 border-outline-variant rounded-xl p-4 focus-within:border-primary-container transition-all">
+<div class="flex items-center space-x-2 border-r border-outline-variant pr-md mr-md">
+<img alt="India Flag" class="w-6 h-4 rounded-sm" data-alt="A tiny digital graphic of the Indian national tricolor flag, clean and sharp, used as a country code selector in a mobile app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy0PL5c6Wg71BHEKl94fZdkgFdksmwDUgwdiO8Zgt8ZoFOEQNfR0qfn6CbmgsC9clPuUbiAN_UNQSzGD3uBqagzUFmkxBDj-y8_aS4SqeWAF0a-BUk46ro-YZFY9TyVlqa_NpQenPagK5d3OdlH58hEe4LkJghDlrdmnF5yhVoenP1R4bzjzFejKy8TDOX9qxzQEDZAuQA6k6Y1IGl_03dZ4afnOslGaQVhQYj6D25oMkLvb_Rd-7vuxAjSbE8OqAdw1mborrd-ask"/>
+<span class="font-label-lg text-label-lg text-on-surface-variant">+91</span>
+</div>
+<input autofocus="" class="flex-1 bg-transparent border-none focus:ring-0 font-headline-sm text-headline-sm tracking-[0.2em] placeholder:text-outline-variant" maxlength="11" placeholder="XXXXX XXXXX" type="tel"/>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant px-sm">
+                By continuing, you agree to our <span class="text-secondary font-semibold">Terms of Service</span> and <span class="text-secondary font-semibold">Privacy Policy</span>.
+            </p>
+</div>
+<!-- Action Button (Spacer pushes it to bottom if needed, or remains in flow for mobile flow) -->
+<div class="mt-auto py-xl">
+<!-- Full-width Primary Blue Button (#1E3A5F mapped to bg-primary-container or hex for exactness) -->
+<button class="w-full h-14 bg-[#1E3A5F] text-on-primary rounded-xl font-label-lg text-lg shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center justify-center space-x-2">
+<span>Send OTP</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</button>
+<!-- Disabled State Representation (Visual only as per prompt request for UI design) -->
+<button class="hidden w-full h-14 bg-surface-variant text-outline-variant rounded-xl font-label-lg text-lg mt-md cursor-not-allowed">
+                Send OTP
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation suppressed as per "The Destination Rule" for Transactional flow -->
+</body></html>

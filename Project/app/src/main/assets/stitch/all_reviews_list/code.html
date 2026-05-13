@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Reviews (23)</h1>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim p-2 rounded-full hover:bg-surface-variant transition-colors cursor-pointer" data-icon="search">search</span>
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim p-2 rounded-full hover:bg-surface-variant transition-colors cursor-pointer" data-icon="notifications">notifications</span>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-margin-mobile pt-lg space-y-xl">
+<!-- Review Summary Card (Bento-style layout) -->
+<section class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/30 grid grid-cols-1 md:grid-cols-5 gap-lg items-center">
+<div class="md:col-span-2 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-outline-variant/30 pb-md md:pb-0 md:pr-md">
+<span class="font-headline-lg text-headline-lg text-primary">4.5</span>
+<div class="flex text-[#FFB800] my-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">23 Global Reviews</span>
+</div>
+<div class="md:col-span-3 space-y-xs">
+<!-- Bar Chart -->
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md w-4">5</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[70%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md w-4">4</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[20%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md w-4">3</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[5%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md w-4">2</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[3%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="font-label-md text-label-md w-4">1</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[2%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters & Sorting -->
+<div class="space-y-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-primary">All Reviews</h2>
+<div class="flex items-center gap-xs bg-surface-container-high px-sm py-xs rounded-lg cursor-pointer">
+<span class="font-label-lg text-label-lg">Recent</span>
+<span class="material-symbols-outlined text-body-md" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex gap-sm overflow-x-auto pb-xs scrollbar-hide">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-lg py-sm rounded-full whitespace-nowrap">All</button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg px-lg py-sm rounded-full whitespace-nowrap flex items-center gap-xs">5 <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg px-lg py-sm rounded-full whitespace-nowrap flex items-center gap-xs">4 <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg px-lg py-sm rounded-full whitespace-nowrap flex items-center gap-xs">3 <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="bg-surface-container-high text-on-surface-variant font-label-lg text-label-lg px-lg py-sm rounded-full whitespace-nowrap flex items-center gap-xs">2 <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+</div>
+<!-- Review List -->
+<div class="space-y-lg">
+<!-- Detailed Review Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/20 space-y-md">
+<div class="flex justify-between items-start">
+<div class="flex gap-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A close-up portrait of a satisfied professional customer in his mid-30s with a friendly expression. The lighting is soft and natural, emphasizing a clean and trustworthy corporate aesthetic. The background is a slightly blurred modern office setting with cool blue and white tones that match the enterprise UI identity. The overall mood is reliable and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3oaoXEtLXSDHaYBEnHopI9q4Tiemy0VcxbToP3YODZIRDEHVnCxWv90srQhIvhAeIPDgKDfqGY3oxY1Q9HN1v-JlXQkPaECFAP3ADpOsld5E7vdg4HL5i1CUapu13hvSjJ8fn6v1wy_CVXR89XURYIR9apW1HupeBtq3eQs9eSstYiWOgU4U0-DYZDNLeXLcSV_SYTgEdHVzJVkRX2XD6bNQiZdQO2TlZxcXpCJ-gltuktyFT3FeLzH9QIU7t31VFVnQrkFh0eVW7"/>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Mark Stevenson</h3>
+<div class="flex text-[#FFB800]">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">2 days ago</span>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container-high text-on-secondary-fixed-variant px-sm py-xs rounded font-label-md text-label-md">Punctuality: 5/5</span>
+<span class="bg-surface-container-high text-on-secondary-fixed-variant px-sm py-xs rounded font-label-md text-label-md">Quality: 5/5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Absolutely exceptional work! The worker arrived exactly on time and finished the plumbing job much faster than expected. The workspace was left perfectly clean. Highly recommend for any corporate maintenance tasks.
+                </p>
+<!-- Horizontal Scroll of Photos -->
+<div class="flex gap-sm overflow-x-auto pb-xs scrollbar-hide">
+<img class="w-32 h-24 rounded-lg object-cover flex-shrink-0" data-alt="A professional high-angle shot of a newly installed industrial plumbing fixture in a clean, modern commercial bathroom. The stainless steel surfaces are gleaming under bright, even fluorescent lighting. The photo captures a sense of precision and quality craftsmanship. The surrounding tiles are pristine white, reinforcing a clinical and corporate cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0nc1tFphbiEIpVhHtKaCjRezZ0x8k1B2mGx_Rsw7gPA2qX_h9Ow7AAHLZZhlKESOmeuprX7ZOpppgbM5130-IUWwTRHzSlRnSXKo07qDqvdDM8O2F2l1WBme-WAI5aAonWrd6M2OXiCuTEg_JfXgr0wyWqgvzqNEgccLZtW7VmZ0B9xQHciZ3rRAKpoJNTJX_Fo2JuZDA0YPybCZERU1KwsFN59lsoMgN4J0vTdPOg_qp95GqtRu3hM_jgy3RUiBfYm2PC-O7iHGb"/>
+<img class="w-32 h-24 rounded-lg object-cover flex-shrink-0" data-alt="Detailed close-up of a technician's toolkit organized neatly on a protective mat on a tiled floor. The tools are high-quality, professional-grade equipment including wrenches and pipe cutters. The lighting is crisp, highlighting the textures of the metal and the blue professional uniform in the periphery. This image communicates preparedness and technical expertise in a commercial setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoBFK-dhgZgA-vvLT4c9t_gVuxw3WsnfDdg3Knaae7AonH564NP90Jey4H3MFtJqh-QxzBeXN5zfvYk6PkDEdQcE_8IlwACLEWHDzmkrsLAcoqdzQMEExQjHPnpa_Li_Q0Yng8XyxcRo8Jf9ncHZxfzZxyf-HvgxaCiiYPsZTlvrFIfT4xYkNlb7SV4qfbt0IJYIdTmfsz6yWQ7Ot9dhFag0FLZ3WkycRogr-GCGCOtJD_2FehzipKJuLHYdVP6iNnbJ-mJzFcIilO"/>
+</div>
+<!-- Worker Response -->
+<div class="bg-surface-container-low rounded-lg p-sm mt-md border-l-4 border-primary">
+<p class="font-label-md text-label-md text-primary mb-xs">Response from Worker</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                        "Thank you for the kind words, Mark! It was a pleasure helping out with your office maintenance. Glad I could get it sorted quickly."
+                    </p>
+</div>
+</article>
+<!-- Detailed Review Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/20 space-y-md">
+<div class="flex justify-between items-start">
+<div class="flex gap-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional corporate portrait of a woman in business casual attire with a bright, confident smile. The photography uses a high-key lighting setup that creates a clean, sophisticated atmosphere. The background is a soft-focus modern architectural space with neutral gray and white tones, aligning with the project's institutional trust and modern design language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrB4TtdgQUFSmtH8o4wjiSkd7c035WYPqwPKiP_0A5x2jgsp6_6nQfI5trrZN1u8Jlxt_BC327lZeHblTYrXdw58F0EUlxXKcYCZg3cvSwjI23zYJ8xu3ekb_4V16vdDS9IbyRBlHwk1OaNQjvuKuv-OOM4cNKKDG9zxc_k4ajexWBM3D2y5OXU7GeOq8RwhFUhs432HrzwKimtNpic-y48_EINcrYeLqAenABmIndNGiHn0HmDlj6wkN306mOQ6uL4-l4EdV_tLId"/>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Sarah Jenkins</h3>
+<div class="flex text-[#FFB800]">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">1 week ago</span>
+</div>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container-high text-on-secondary-fixed-variant px-sm py-xs rounded font-label-md text-label-md">Communication: 4/5</span>
+<span class="bg-surface-container-high text-on-secondary-fixed-variant px-sm py-xs rounded font-label-md text-label-md">Value: 5/5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Very professional and vetting was clear. The quality of repair was top-notch. Only reason for 4 stars is a slight delay in confirming the initial arrival time, but the service itself was flawless.
+                </p>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface dark:bg-on-surface shadow-lg rounded-t-xl border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-5 py-1 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</div>
+</nav>
+</body></html>

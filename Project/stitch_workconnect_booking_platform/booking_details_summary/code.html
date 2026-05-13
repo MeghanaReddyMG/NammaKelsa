@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-step::after {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: -8px;
+            width: 2px;
+            background-color: #e3e2e6;
+        }
+        .timeline-step:last-child::after {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Booking #1234</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-[#dcfce7] text-[#166534] px-3 py-1 rounded-full font-label-lg text-label-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                Accepted
+            </span>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-margin-mobile py-lg space-y-lg">
+<!-- Bento Grid Layout: Core Info -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-mobile">
+<!-- Worker Profile Card -->
+<section class="md:col-span-7 bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-md">
+<img alt="Worker Portrait" class="w-16 h-16 rounded-full object-cover border-2 border-primary-container" data-alt="A professional headshot of a skilled electrician smiling at the camera, wearing a clean navy blue work uniform. The background is a brightly lit, modern workshop with tools neatly organized on the walls. The lighting is warm and cinematic, emphasizing a sense of reliability and expertise. The overall aesthetic is clean, corporate, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGXvpaPuwvXbZCNfZxr1rAobxyMURlMJOZXzSZ7q9h0mM5zU4rplCtzDH9PQQCvmY2iNLaQo9LlomXtSRtVfr7Vg0Z8_fpKb8IBDjaeUlFcdTqacpd8rwhbhHENEj4GPaPnIimTdOElv6f2i_m-gWl4VD_W6h9e4PUGnwqovxKWsWwTaDnEAI6T0NNv3XKF2dCuBALhLXzWnAPlZH-4aXCubcwbr06Va2tI4nseKGc7ecR9m0T792JqeuAgS0t-n6ntjqpOCeuWHWF"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Marcus Sterling</h2>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#FFB800] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg">4.9 (124 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-xl font-label-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">call</span>
+                        Call
+                    </button>
+<button class="flex items-center justify-center gap-2 border border-primary text-primary py-3 rounded-xl font-label-lg hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chat</span>
+                        Chat
+                    </button>
+</div>
+</section>
+<!-- Status Timeline Card -->
+<section class="md:col-span-5 bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm">
+<h3 class="font-label-lg text-label-lg text-outline mb-md uppercase tracking-wider">Timeline</h3>
+<div class="space-y-4">
+<div class="timeline-step relative flex items-start gap-md">
+<span class="material-symbols-outlined text-primary bg-secondary-fixed p-1 rounded-full z-10" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Booked</p>
+<p class="text-body-md text-on-surface-variant">Oct 12, 09:15 AM</p>
+</div>
+</div>
+<div class="timeline-step relative flex items-start gap-md">
+<span class="material-symbols-outlined text-primary bg-secondary-fixed p-1 rounded-full z-10" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Accepted</p>
+<p class="text-body-md text-on-surface-variant">Oct 12, 10:30 AM</p>
+</div>
+</div>
+<div class="timeline-step relative flex items-start gap-md">
+<span class="material-symbols-outlined text-outline bg-surface-variant p-1 rounded-full z-10">radio_button_unchecked</span>
+<div>
+<p class="font-label-lg text-label-lg text-outline">In Progress</p>
+<p class="text-body-md text-outline-variant">Pending arrival</p>
+</div>
+</div>
+<div class="timeline-step relative flex items-start gap-md">
+<span class="material-symbols-outlined text-outline bg-surface-variant p-1 rounded-full z-10">radio_button_unchecked</span>
+<div>
+<p class="font-label-lg text-label-lg text-outline">Completed</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Service Details Card -->
+<section class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm space-y-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-lg">build</span>
+<h3 class="font-headline-sm text-headline-sm">Fan Installation</h3>
+</div>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                Standard ceiling fan installation. Marcus will replace the existing fixture with a high-efficiency smart fan. The job includes basic wiring checks and balancing.
+            </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm pt-sm">
+<img alt="Attachment 1" class="w-full h-24 object-cover rounded-lg border border-outline-variant" data-alt="A detailed close-up shot of a modern, brushed nickel ceiling fan with sleek wooden blades. The lighting is bright and airy, showing the fine textures of the metal and wood. The composition is focused on the craftsmanship of the product, set against a pristine white ceiling. The mood is clean, professional, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCStN1Zk9Lhywco9XX5b8INqaLv4C_d_d69_gv4SkBZ-jpt24xHnU8O9vj3LeUtVpd9FthgRFMzBwGqDH5hO_6QRnzepf1bqmyZ3mCYdUyq0LbDghjqJ9sx59sYVORGaq3v_uvrYpuOofLMqgrmUZ2k0FWXTDqGyKIuwD8tohF7D-PwnmBR1dEjZjD8XyvlO4eg1GvTiXdMRDPmXWJVkfoZi7N-xumAK1dYDsDAIaHpXAsZGdrMLposPg7L49p6GC9aEuin45-vEJoZ"/>
+<img alt="Attachment 2" class="w-full h-24 object-cover rounded-lg border border-outline-variant" data-alt="A wide-angle interior photograph of a minimalist, well-lit living room with high ceilings. A technician's toolkit and ladder are neatly placed near a centered electrical outlet on the ceiling. The room is flooded with natural daylight from large windows, creating a bright and professional atmosphere that suggests a work-in-progress service appointment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_PJ91nv7UEn8KX4ivemi4lZzvLi32bnuPH_9H7IAX8G3uGlzv_zkpZl38yRsBBUSN9yXGPYgdmVTB9if5-GVBWXrEIRHlumXL_539J-WPfLG63fW5DfalycjbZ79JhVDJPxlLnH_jKeBJAyaxOdw8UMwM_i7ut1UgfuVTN2sVgjwk6g5IQ9A-5r2N4C5LQLjSFfRu3nT0Zw7OBo2XmS1vJclX83pKBcm1S3l2Dd3uio3Bk2LtLUzG6kaFF88giXZZ5KvSJGpT-8W"/>
+<div class="w-full h-24 bg-surface-variant rounded-lg flex items-center justify-center text-outline">
+<span class="material-symbols-outlined">add_a_photo</span>
+</div>
+</div>
+</section>
+<!-- Schedule & Location -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-mobile">
+<section class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm flex items-start gap-md">
+<div class="bg-primary-fixed text-primary p-3 rounded-xl">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-outline uppercase">Schedule</h3>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1">Oct 14, 2023</p>
+<p class="text-body-md text-on-surface-variant">02:00 PM - 04:00 PM (2 hrs)</p>
+</div>
+</section>
+<section class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm space-y-md">
+<div class="flex items-start gap-md">
+<div class="bg-primary-fixed text-primary p-3 rounded-xl">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex-1">
+<h3 class="font-label-lg text-label-lg text-outline uppercase">Location</h3>
+<p class="font-body-lg text-body-lg text-on-surface mt-1">128 Oakwood Drive, North Wing, Apt 4B, San Francisco, CA</p>
+</div>
+</div>
+<button class="w-full border border-outline text-on-surface-variant py-2.5 rounded-lg font-label-lg flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">map</span>
+                    Open in Maps
+                </button>
+</section>
+</div>
+<!-- Cost Breakdown -->
+<section class="bg-surface-container-highest p-md rounded-xl">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase mb-md">Cost Summary</h3>
+<div class="space-y-sm">
+<div class="flex justify-between items-center text-body-lg">
+<span>Estimated Cost</span>
+<span class="text-on-surface-variant">$85.00</span>
+</div>
+<div class="flex justify-between items-center text-body-lg">
+<span>Final Cost (incl. taxes)</span>
+<span class="font-bold text-on-surface text-xl">$92.40</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 w-full bg-surface border-t border-outline-variant px-margin-mobile py-md z-50">
+<div class="max-w-3xl mx-auto flex gap-md">
+<button class="flex-1 bg-[#ba1a1a] text-white py-4 rounded-xl font-label-lg flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined">cancel</span>
+                Cancel Booking
+            </button>
+</div>
+</div>
+<!-- Navigation Shell Placeholder (Per Shared Components logic, hidden on sub-page, but implementing as ghost for context if needed) -->
+<!-- Navigation is suppressed as per the "Destination" rule: Task-Focused sub-page featuring a Back action -->
+</body></html>

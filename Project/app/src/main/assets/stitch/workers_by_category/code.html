@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-surface-container-low dark:bg-surface-dim shadow-sm flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky top-0">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed font-bold">Electricians (24)</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant dark:text-outline-variant hover:bg-surface-variant dark:hover:bg-on-surface-variant transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- Filter Section -->
+<div class="bg-surface px-margin-mobile py-4 sticky top-16 z-40 border-b border-outline-variant/30 shadow-sm">
+<div class="flex overflow-x-auto hide-scrollbar gap-2 mb-4">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap">All</button>
+<button class="bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap hover:bg-surface-variant transition-colors">Wiring</button>
+<button class="bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap hover:bg-surface-variant transition-colors">Fan Repair</button>
+<button class="bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap hover:bg-surface-variant transition-colors">Circuit Breaker</button>
+<button class="bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap hover:bg-surface-variant transition-colors">AC Service</button>
+<button class="bg-surface-container-highest text-on-surface-variant font-label-lg text-label-lg px-6 py-2 rounded-full whitespace-nowrap hover:bg-surface-variant transition-colors">Appliance</button>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-label-md text-label-md">Sort by</span>
+<div class="relative group">
+<button class="flex items-center gap-1 border border-outline-variant px-3 py-1.5 rounded-lg text-on-surface font-label-lg text-label-lg">
+                    Rating
+                    <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Worker List -->
+<main class="px-margin-mobile py-lg space-y-md">
+<!-- Worker Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional male electrician in a blue work uniform looking confidently at the camera. The setting is a brightly lit, clean indoor environment with industrial equipment blurred in the background. High contrast, professional corporate headshot style using a palette of deep blues and neutral whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRj_9gh7kH6PQkTurfpcDWF2fRK9ct0w0XxnHfNMGDr6Viok3gAyp_1qvKJuVFFe5Fp4XTrSb9-hQn-opYOhsf1PAQ0REp_uf8pN9dCRzOlEm9DNk4nuZqJvwxGJUxfw7FMyIUJJ5P00ABAc2LuDJZqQEN--WkXMdNpI5H50rc6M6VSiBk7-Nr6X9TXAnotX6JmIwe_VJayBWSzRZ2QbgC2_OoN-LRPzmlSmnAjWHQHbDkp0Ep_sv19GyLPRmpCRSTsVfFYGa2VuU3"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Samuel Rivera</h2>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.9</span>
+<span class="text-on-surface-variant text-label-md font-label-md">(128 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline-sm text-headline-sm text-secondary">$35/hr</span>
+<span class="text-on-surface-variant text-label-md font-label-md">8 years exp.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Complex Wiring</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Industrial Systems</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Smart Home</span>
+</div>
+<div class="mt-4 flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-1 text-on-surface-variant text-label-md font-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                    1.2 miles away
+                </div>
+<div class="flex gap-2">
+<button class="border border-primary text-primary font-label-lg text-label-lg px-4 py-2 rounded-xl hover:bg-primary/5 transition-colors">Details</button>
+<button class="bg-[#FF6B35] text-white font-label-lg text-label-lg px-6 py-2 rounded-xl shadow-sm active:scale-95 transition-all">Book Now</button>
+</div>
+</div>
+</article>
+<!-- Worker Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A skilled female electrical technician holding professional tools in a modern office building interior. The lighting is soft and natural, emphasizing a bright, trustworthy atmosphere. She wears a branded work shirt, reflecting a corporate and reliable aesthetic. The color palette is dominated by professional navy and clean whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4UjtnzxsW2IBAftGqvl16PznIWDU6eb6gNLXspyjTYGf16bVi6mPhfaoagxQdVOkeNbW_NGElQG3RG1WoS1QQmTMqBzkyL_R0v_6230Q4YDu7zrZRQbQxeU3yV7iM-y4qw2qAKyVG4bgynXfaKmYn92MdRQSY2LuljHNWUobVMpjAZvAs8KkygJTwUSocCoAFKdHbe8j0gw_xXs4NLnpgYnrIU3KSNhruI6EeoC6ImsVL6A_xQzV0Ueh_LTv0mrESJmgo0RrlUkAu"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Maria Garcia</h2>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.8</span>
+<span class="text-on-surface-variant text-label-md font-label-md">(94 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline-sm text-headline-sm text-secondary">$32/hr</span>
+<span class="text-on-surface-variant text-label-md font-label-md">5 years exp.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Appliance Repair</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Lighting Install</span>
+</div>
+<div class="mt-4 flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-1 text-on-surface-variant text-label-md font-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                    2.5 miles away
+                </div>
+<div class="flex gap-2">
+<button class="border border-primary text-primary font-label-lg text-label-lg px-4 py-2 rounded-xl">Details</button>
+<button class="bg-[#FF6B35] text-white font-label-lg text-label-lg px-6 py-2 rounded-xl shadow-sm active:scale-95 transition-all">Book Now</button>
+</div>
+</div>
+</article>
+<!-- Worker Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant/20 hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A senior master electrician with grey hair and friendly expression, standing in a workshop setting with organized tools. The warm, focused lighting highlights experience and reliability. The visual style is crisp and modern, focusing on functional clarity and institutional trust through a palette of primary navy and warm wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAafzLQu-c2JuZbyynpe-XsEJsP6olXrxKVIuOn13b0d0PkU_wAN-kmnZuqGjKEpfHcP1sHd_qODWupiImU8gnrYXWy9RqwRVXZ0eUtQ5iFZfs3fAlfMTzzFWdAktEMa7n_-z_PQmNQbRGrI8Kb9oJCUfUX4wfdNLsdO7E-gYOX6MH_bSuApIlZ0Z_FSaUbjSdI9DBamc90vOKxu3SSFLFT70zr5VN51niou7LAyYEaMEuFmur-M3T8OgctzVOQYkVjJjsZ5okeLla3"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">James Chen</h2>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg text-on-surface">5.0</span>
+<span class="text-on-surface-variant text-label-md font-label-md">(210 reviews)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-headline-sm text-headline-sm text-secondary">$45/hr</span>
+<span class="text-on-surface-variant text-label-md font-label-md">15 years exp.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Panel Upgrades</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">Fault Finding</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-md font-label-md">EV Charger</span>
+</div>
+<div class="mt-4 flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-1 text-on-surface-variant text-label-md font-label-md">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                    0.8 miles away
+                </div>
+<div class="flex gap-2">
+<button class="border border-primary text-primary font-label-lg text-label-lg px-4 py-2 rounded-xl">Details</button>
+<button class="bg-[#FF6B35] text-white font-label-lg text-label-lg px-6 py-2 rounded-xl shadow-sm active:scale-95 transition-all">Book Now</button>
+</div>
+</div>
+</article>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface dark:bg-on-surface shadow-lg border-t border-outline-variant dark:border-outline rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-5 py-1 scale-90 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors rounded-lg px-3" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors rounded-lg px-3" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-surface-variant transition-colors rounded-lg px-3" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

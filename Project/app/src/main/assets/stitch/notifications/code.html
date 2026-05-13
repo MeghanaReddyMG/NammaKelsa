@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - WorkConnect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c4c6cf",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#edbf7f",
+                        "surface-variant": "#e3e2e6",
+                        "outline": "#74777f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-dim": "#dad9dd",
+                        "surface-container": "#eeedf1",
+                        "inverse-primary": "#adc8f5",
+                        "on-surface": "#1a1c1e",
+                        "background": "#faf9fc",
+                        "primary-container": "#1e3a5f",
+                        "on-primary-container": "#8aa4cf",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fc",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb2",
+                        "primary": "#022448",
+                        "on-primary-fixed": "#001c3b",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#455f87",
+                        "secondary-container": "#6fb2fd",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#2d486d",
+                        "inverse-surface": "#2f3033",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f4f3f7",
+                        "secondary-fixed-dim": "#a0caff",
+                        "inverse-on-surface": "#f1f0f4",
+                        "surface": "#faf9fc",
+                        "primary-fixed-dim": "#adc8f5",
+                        "on-tertiary-fixed-variant": "#60410c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#c69b5f",
+                        "tertiary": "#341f00",
+                        "on-secondary-container": "#004375",
+                        "tertiary-container": "#503300",
+                        "on-background": "#1a1c1e",
+                        "surface-container-highest": "#e3e2e6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e7eb",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary": "#0061a5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "gutter-mobile": "12px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 fixed top-0 bg-surface shadow-sm">
+<div class="flex items-center gap-sm">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Notifications</h1>
+</div>
+<button class="font-label-lg text-label-lg text-primary hover:bg-surface-variant px-md py-sm rounded-lg transition-colors active:opacity-80 active:scale-95 duration-100">
+            Clear All
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 px-margin-mobile max-w-2xl mx-auto">
+<!-- Today Group -->
+<section class="mb-lg">
+<h2 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md px-sm">Today</h2>
+<div class="space-y-sm">
+<!-- Notification Item: Unread Booking -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border-l-4 border-secondary flex gap-md relative">
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="assignment">assignment</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface pr-4">Booking Confirmed</h3>
+<span class="font-label-md text-label-md text-outline">2m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Your request for "Electrical Maintenance" has been accepted by Alex Chen.</p>
+</div>
+</div>
+<!-- Notification Item: Unread Review -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border-l-4 border-secondary flex gap-md relative">
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="reviews">reviews</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface pr-4">New Review Received</h3>
+<span class="font-label-md text-label-md text-outline">1h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">An employer left you a 5-star review for the "Office Cleaning" job!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Yesterday Group -->
+<section class="mb-lg">
+<h2 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md px-sm">Yesterday</h2>
+<div class="space-y-sm">
+<!-- Notification Item: Read Payment -->
+<div class="bg-surface-container-low p-md rounded-xl flex gap-md opacity-80">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">Payment Processed</h3>
+<span class="font-label-md text-label-md text-outline">1d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Payment of $150.00 for the project "UI Design Support" has been credited.</p>
+</div>
+</div>
+<!-- Notification Item: Read Account -->
+<div class="bg-surface-container-low p-md rounded-xl flex gap-md opacity-80">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="security">security</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">Security Alert</h3>
+<span class="font-label-md text-label-md text-outline">1d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A new login was detected from a Chrome browser on Windows.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Earlier Group -->
+<section>
+<h2 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md px-sm">Earlier</h2>
+<div class="grid grid-cols-1 gap-sm">
+<!-- Notification Item: Promotion (Asymmetric Layout Style) -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-2xl flex flex-col md:flex-row gap-md overflow-hidden relative">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12"></div>
+<div class="w-full md:w-32 h-24 md:h-32 bg-secondary-container/20 rounded-xl overflow-hidden shrink-0">
+<img alt="Team success" class="w-full h-full object-cover" data-alt="A professional, diverse team of office workers celebrating a milestone together in a bright, modern corporate environment. High-key lighting fills the space with a sense of optimism and success. The background features blurred glass partitions and contemporary office furniture, aligning with a premium, corporate UI aesthetic. The color palette is composed of soft blues, crisp whites, and warm wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgnztG3pn9rLUIa7d4gllJu6tyfcNFwScmn5IJKmMQYmKp4ogoArbbstHd4gnBbDc8RKa3x7uvJ23zksugOD0aLyp3ejKW6V7sWCzrhYSXWIdOrH003eujCSSynyaWm9jpzThuvjVMzOB9ocFhtG5K7ziygUsNsj3YK_ROqaqTjuhrzLVbnetwF_EpQbTuLHd2QnHIr3-Q3LIVrt1LGzKBN6cqa7gVKuH1nyk6yHdIvR_RUBAWRj-hroT7pGkKIdcPe0x5aCNmtPKe"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-primary">Earn More This Week!</h3>
+<span class="font-label-md text-label-md text-outline">3d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete 3 more bookings this week to unlock a $50 performance bonus.</p>
+<div class="mt-md">
+<button class="bg-primary text-on-primary px-md py-2 rounded-lg font-label-md text-label-md w-fit hover:opacity-90 transition-opacity">
+                                View Missions
+                            </button>
+</div>
+</div>
+</div>
+<!-- Simple Read Notification -->
+<div class="bg-surface-container-low p-md rounded-xl flex gap-md opacity-80">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="update">update</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-label-lg text-label-lg text-on-surface">System Update</h3>
+<span class="font-label-md text-label-md text-outline">5d ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">WorkConnect v2.4 is now live. Check out the new earning insights dashboard.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface shadow-lg rounded-t-xl border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="assignment">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✅"
+        android:textSize="60sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOOKING CONFIRMED!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvBookingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking ID: #..."
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvBookingDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Worker Details\nDate and Time\nAddress"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: ⏳ PENDING"
+        android:textStyle="bold"
+        android:textColor="#F4B400"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waiting for worker to accept..."
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="VIEW BOOKING STATUS"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnBackToSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Search"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>

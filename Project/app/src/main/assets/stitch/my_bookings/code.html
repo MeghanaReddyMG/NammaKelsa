@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c6cf",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#edbf7f",
+                    "surface-variant": "#e3e2e6",
+                    "outline": "#74777f",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#00497e",
+                    "surface-dim": "#dad9dd",
+                    "surface-container": "#eeedf1",
+                    "inverse-primary": "#adc8f5",
+                    "on-surface": "#1a1c1e",
+                    "background": "#faf9fc",
+                    "primary-container": "#1e3a5f",
+                    "on-primary-container": "#8aa4cf",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#faf9fc",
+                    "on-tertiary-fixed": "#291800",
+                    "tertiary-fixed": "#ffddb2",
+                    "primary": "#022448",
+                    "on-primary-fixed": "#001c3b",
+                    "on-primary-fixed-variant": "#2d486d",
+                    "inverse-surface": "#2f3033",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f4f3f7",
+                    "secondary-fixed-dim": "#a0caff",
+                    "inverse-on-surface": "#f1f0f4",
+                    "surface": "#faf9fc",
+                    "primary-fixed-dim": "#adc8f5",
+                    "on-tertiary-fixed-variant": "#60410c",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#c69b5f",
+                    "tertiary": "#341f00",
+                    "on-secondary-container": "#004375",
+                    "tertiary-container": "#503300",
+                    "on-background": "#1a1c1e",
+                    "surface-container-highest": "#e3e2e6",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e9e7eb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d2e4ff",
+                    "secondary": "#0061a5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "gutter-mobile": "12px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #faf9fc;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 bg-surface-container-low sticky top-0 shadow-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">WorkConnect</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pb-24">
+<!-- Tab Navigation -->
+<nav class="flex px-margin-mobile mt-lg gap-sm border-b border-outline-variant">
+<button class="pb-3 px-4 text-primary font-bold border-b-2 border-primary font-label-lg text-label-lg">Active</button>
+<button class="pb-3 px-4 text-on-surface-variant hover:bg-surface-variant transition-colors font-label-lg text-label-lg">Upcoming</button>
+<button class="pb-3 px-4 text-on-surface-variant hover:bg-surface-variant transition-colors font-label-lg text-label-lg">Past</button>
+</nav>
+<section class="px-margin-mobile mt-lg space-y-md">
+<!-- Booking Card 1: Accepted/Call -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-surface-container-high">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex gap-md">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="A professional headshot of a skilled male electrician in his mid-30s wearing a neat blue uniform. The background is a brightly lit, clean modern workshop with tools organized on a wall. The lighting is crisp and high-contrast, emphasizing reliability and professional expertise. The overall aesthetic is clean, corporate, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFOrOav7pYiIVpulUwsLNmtgqj5ViS0dduBXDyu7kwIev4TQn7NbY5URvcQWrG4mGGCg9KdB0zt38b0OSniL1_FwS2_8W2dY0r9hfHF7bWjcqEKbwfJAyIJw-CP_Md0T6rsEjAka9vQKOGTov2srCCDD1EQ9Y9tLz5kw9KqWtebCXoj_nA2cIwsbljZHIl01GRIF4KPRB6Sj1BpVJ_hiv5lZD7xAZQ-B0hBYRB2A4La4vyWvB3U42p1SoKvsdoDINSqV6g9iHi1pri"/>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Marcus Chen</h3>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="construction">construction</span>
+<span class="font-body-md text-body-md">Electrical Repair</span>
+</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">Accepted</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">Fixing short circuit issue in kitchen and installing new smart lighting system.</p>
+<div class="flex items-center justify-between py-md border-y border-surface-container">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Date &amp; Time</span>
+<span class="font-label-lg text-label-lg text-on-surface">Oct 24, 2023 • 10:00 AM</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-outline">Total Cost</span>
+<div class="font-headline-sm text-headline-sm text-primary">$85.00</div>
+</div>
+</div>
+<div class="mt-md flex gap-sm">
+<button class="flex-1 py-sm bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-sm active:scale-95 duration-100">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span> Call
+                    </button>
+<button class="flex-1 py-sm border border-primary text-primary rounded-xl font-label-lg text-label-lg active:scale-95 duration-100">View Details</button>
+</div>
+</div>
+<!-- Booking Card 2: Pending/Cancel -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-surface-container-high opacity-90">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex gap-md">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="A professional close-up of a female interior painter in her late 20s. She is smiling confidently, wearing a white painter's apron with light paint splatters. The setting is a minimalist, sun-drenched room with neutral tones and clean lines. High-key lighting highlights her professional demeanor against a background of soft primary-light blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_DL8-yOGx_AfNnCftSfPJOaU35dl6BzKv-RbFEcJxvkS9CUncYYLRmUwMQ_52z6LXPohiYAdHFo3zApsCVUbQwwfbLRsDj1bE5cod1pz6DT7BXHish_jrH9UmACRuu2qAW_Wnjsz6vFGgnIRivOir9LGgJzKIjnLHX_jmK3t3Zc_oI8F_iO30wE6Fk4CNryN_7S7A_D3b2BECXIK6vbeAs3muEjN2TIxJMDNVtshJ3PVhkG8SUUKNlOaAaXpWAH6xexp16MC-KBsr"/>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Elena Rodriguez</h3>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="brush">brush</span>
+<span class="font-body-md text-body-md">Interior Painting</span>
+</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md">Pending</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">Living room accent wall painting with satin finish premium coat.</p>
+<div class="flex items-center justify-between py-md border-y border-surface-container">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Date &amp; Time</span>
+<span class="font-label-lg text-label-lg text-on-surface">Oct 26, 2023 • 02:30 PM</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-outline">Estimated Cost</span>
+<div class="font-headline-sm text-headline-sm text-primary">$120.00</div>
+</div>
+</div>
+<div class="mt-md flex gap-sm">
+<button class="flex-1 py-sm bg-error-container text-on-error-container rounded-xl font-label-lg text-label-lg active:scale-95 duration-100">Cancel Request</button>
+<button class="flex-1 py-sm border border-primary text-primary rounded-xl font-label-lg text-label-lg active:scale-95 duration-100">Modify</button>
+</div>
+</div>
+<!-- Booking Card 3: Completed/Rate -->
+<div class="bg-surface-container-low rounded-xl p-md shadow-sm border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex gap-md">
+<img class="w-14 h-14 rounded-full object-cover grayscale opacity-70" data-alt="A focused male carpenter in his 40s working in a high-end woodworking shop. The atmosphere is warm with soft ambient lighting and dust motes dancing in sunbeams. The scene is captured in a professional documentary style with a palette of deep navy and rich wood browns. His expression is one of calm, experienced precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_2_u-UnrEF584cdUUrILKUUuQCA2mV0lLV0-p7uF_77Ysv4WttlUPaTnzGH1IZnOGjO8QIGNawwDCpEv0PVRRX3-xi6_9-FaF90ok6wW1ckppSKLuhOSlmD4PCrGAyc4b_dfWkiLEsDOhc987mQJGENE1Ig7T8mXxfw-vOCLjxD05cepPBXoul_TZ_5cSeY0IHjTOdJl5DyuFF-SV8oW959ErVLkobBCT_N__Gh23w2i3b80m877Crmq7qz_VA63M8xTtv9rH8Mf3"/>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Samuel Wright</h3>
+<div class="flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="handyman">handyman</span>
+<span class="font-body-md text-body-md">Furniture Assembly</span>
+</div>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-label-md">Completed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">Assembly of large office desk and two ergonomic chairs.</p>
+<div class="flex items-center justify-between py-md border-y border-surface-container">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-outline">Date &amp; Time</span>
+<span class="font-label-lg text-label-lg text-on-surface">Oct 18, 2023 • 09:00 AM</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-outline">Paid</span>
+<div class="font-headline-sm text-headline-sm text-primary">$60.00</div>
+</div>
+</div>
+<div class="mt-md">
+<button class="w-full py-sm bg-[#FF6B35] text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-sm active:scale-95 duration-100">
+<span class="material-symbols-outlined text-[18px]" data-icon="star">star</span> Rate Worker
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm pb-safe bg-surface shadow-lg rounded-t-xl border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 scale-90 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="assignment" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Earnings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</footer>
+</body></html>

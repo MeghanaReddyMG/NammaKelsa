@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#c4c6cf",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#edbf7f",
+            "surface-variant": "#e3e2e6",
+            "outline": "#74777f",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#00497e",
+            "surface-dim": "#dad9dd",
+            "surface-container": "#eeedf1",
+            "inverse-primary": "#adc8f5",
+            "on-surface": "#1a1c1e",
+            "background": "#faf9fc",
+            "primary-container": "#1e3a5f",
+            "on-primary-container": "#8aa4cf",
+            "error-container": "#ffdad6",
+            "surface-bright": "#faf9fc",
+            "on-tertiary-fixed": "#291800",
+            "tertiary-fixed": "#ffddb2",
+            "primary": "#022448",
+            "on-primary-fixed": "#001c3b",
+            "primary-fixed": "#d5e3ff",
+            "surface-tint": "#455f87",
+            "secondary-container": "#6fb2fd",
+            "on-surface-variant": "#43474e",
+            "on-secondary-fixed": "#001c37",
+            "on-primary-fixed-variant": "#2d486d",
+            "inverse-surface": "#2f3033",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f4f3f7",
+            "secondary-fixed-dim": "#a0caff",
+            "inverse-on-surface": "#f1f0f4",
+            "surface": "#faf9fc",
+            "primary-fixed-dim": "#adc8f5",
+            "on-tertiary-fixed-variant": "#60410c",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#c69b5f",
+            "tertiary": "#341f00",
+            "on-secondary-container": "#004375",
+            "tertiary-container": "#503300",
+            "on-background": "#1a1c1e",
+            "surface-container-highest": "#e3e2e6",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#e9e7eb",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#d2e4ff",
+            "secondary": "#0061a5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "16px",
+            "md": "16px",
+            "gutter-mobile": "12px",
+            "xl": "32px",
+            "xs": "4px",
+            "lg": "24px",
+            "sm": "8px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 z-50 bg-surface-container-low dark:bg-surface-dim shadow-sm sticky top-0">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="location_on">location_on</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">WorkConnect</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="notifications">notifications</span>
+</div>
+</header>
+<main class="max-w-xl mx-auto px-margin-mobile mt-lg">
+<!-- Progress Header -->
+<section class="mb-xl">
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-label-lg text-label-lg text-primary">Step 3 of 4</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">75% Complete</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+</section>
+<!-- Main Content Heading -->
+<section class="mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Where do you work?</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Set your service area and typical working hours to receive relevant job notifications.</p>
+</section>
+<!-- Address Section -->
+<section class="mb-xl space-y-md">
+<button class="w-full flex items-center justify-center gap-sm py-md border border-primary text-primary rounded-xl font-label-lg text-label-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span>
+        Use Current Location
+      </button>
+<div class="grid grid-cols-1 gap-md bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Street / Area</label>
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg" placeholder="e.g. 123 Industrial Estate" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">City</label>
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg" placeholder="City" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">State</label>
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg" placeholder="State" type="text"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Pincode</label>
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg" placeholder="6-digit code" type="text"/>
+</div>
+</div>
+</section>
+<!-- Map Preview Asymmetric Element -->
+<div class="mb-xl relative rounded-xl overflow-hidden h-32 w-full group">
+<img alt="Service Area Map" class="w-full h-full object-cover" data-alt="A minimalist top-down vector style map interface showing a city grid in soft greys and muted blues matching a professional corporate UI. A single prominent circular marker in deep navy blue indicates a central location. The lighting is flat and modern with subtle drop shadows for depth. The overall mood is functional and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9cB3aRqVS519sR7wDC_19XxpjVrwh2vYKQAkF7mVD7L7mCkSwBmD5xUY9_CxAFNtlL6zVAWnI0v8TMypmGW6q6ra0MR99gixcGRCqB6kY_SNvlmX9QydH8N4NTei_8n_KWi7W4SzWvRKiLPvl06ZoWSfXWDoEtgyIVwROq5swlIB31Ms3poXEMCLKFgvFMyy3rQJEqkBT396oO3wFEp12bF7YefPQQbPFnOQkRSREkZMsocQ35GQdrENnEmpUPaeQg7zbdb3kZKUc"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<span class="bg-surface text-primary px-md py-xs rounded-full shadow-sm font-label-md text-label-md">Service Radius: 10km</span>
+</div>
+</div>
+<!-- Availability Section -->
+<section class="mb-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-md">Availability</h3>
+<div class="space-y-lg">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-sm">Working Days</label>
+<div class="flex flex-wrap gap-sm">
+<button class="px-md py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md">Mon</button>
+<button class="px-md py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md">Tue</button>
+<button class="px-md py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md">Wed</button>
+<button class="px-md py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md">Thu</button>
+<button class="px-md py-sm rounded-full bg-primary text-on-primary font-label-md text-label-md">Fri</button>
+<button class="px-md py-sm rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">Sat</button>
+<button class="px-md py-sm rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md">Sun</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Start Time</label>
+<div class="relative">
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg appearance-none" type="time" value="09:00"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none" data-icon="schedule">schedule</span>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">End Time</label>
+<div class="relative">
+<input class="w-full px-md py-sm border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none text-body-lg font-body-lg appearance-none" type="time" value="18:00"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none" data-icon="schedule">schedule</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Task Focused Navigation -->
+<div class="flex items-center gap-md pt-lg border-t border-outline-variant">
+<button class="flex-1 py-md border border-primary text-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-xs hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+        Back
+      </button>
+<button class="flex-[2] py-md bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-xs shadow-lg hover:opacity-90 transition-all active:scale-95">
+        Next Step
+        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Navigation Shell (Suppressed for focused task per UI guidelines) -->
+<!-- Note: BottomNavBar is intentionally excluded here as this is a focused linear transaction/onboarding screen -->
+</body></html>
