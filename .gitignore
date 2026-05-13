@@ -21,6 +21,10 @@
 # Local configuration (contains SDK path, should not be committed)
 local.properties
 
+# Firebase config (contains API keys - never commit)
+google-services.json
+**/google-services.json
+
 # Android Studio / IntelliJ IDEA
 /.idea/
 *.iml
