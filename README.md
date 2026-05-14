@@ -1,79 +1,99 @@
-Namma-Kelsa – Hyperlocal Worker Marketplace
+#  Namma-Kelsa – Hyperlocal Worker Marketplace
 
-Namma-Kelsa is a hyperlocal Android marketplace application that connects customers with skilled daily-wage workers such as electricians, plumbers, carpenters, and more — without middlemen.
+Namma-Kelsa is a hyperlocal Android application that connects customers with skilled daily-wage workers such as electricians, plumbers, and carpenters without any middlemen.
 
-It enables direct communication, fair wages, and real-time worker discovery based on location and availability.
+The platform enables direct interaction, fair wages, and real-time worker discovery based on location and availability.
 
-📌 Problem Statement
--Workers lack digital presence
--Customers struggle to find trusted nearby workers
--Middlemen take 20–40% commission
--No proper rating or verification system
+---
 
-💡 Solution
+## 📌 Problem Statement
+
+- Workers lack digital presence  
+- Customers struggle to find trusted nearby workers  
+- Middlemen take high commissions  
+- No proper rating or transparency system  
+
+---
+
+## 💡 Solution
+
 Namma-Kelsa provides a two-sided platform:
-👷 Worker
--Create profile with skills & experience
--Upload work portfolio
--Set daily rates
--Toggle availability
--Accept/decline bookings
--Receive ratings & reviews
-🧑 Customer
--Search workers by skill & distance
--View profiles & ratings
--Book appointments
--Call workers directly
--Rate & review services
-🏗️ Features
-🔐 Authentication
-Email & Password based login (Firebase Auth)
-Secure user session management
-👤 Profile Management
-Worker & Customer profiles
-Portfolio image uploads
-Real-time updates
-🔍 Search & Filter
-Search by skill (Electrician, Plumber, etc.)
-Filter by:
-Distance
-Rating
-Availability
-📅 Booking System
-Schedule jobs (date & time)
-Auto price calculation
-Booking status tracking:
-Pending
-Accepted
-Completed
-⭐ Ratings & Reviews
-Customers rate workers (1–5 stars)
-Feedback system builds trust
-📍 Location-Based Services
-Nearby worker discovery using GeoFirestore
-Google Maps integration
-📞 Communication
-Direct call to workers via phone dialer
-🔔 Notifications
-Booking alerts
-Status updates using Firebase Cloud Messaging
-🧑‍💻 Tech Stack
-📱 Frontend (Android)
-Kotlin
-XML (Material Design 3)
-MVVM Architecture
-RecyclerView + LiveData
-☁️ Backend (Firebase)
-Firebase Authentication (Email/Password)
-Cloud Firestore (Database)
-Firebase Storage (Images)
-Firebase Cloud Messaging (Notifications)
-📍 APIs & Libraries
-Google Maps API
-GeoFirestore (Location queries)
-Glide (Image loading)
-Coroutines (Async operations)
-📂 Project Structure
+
+### 👷 Worker
+- Create and manage profile  
+- Add skills and experience  
+- Set daily rates  
+- Toggle availability  
+- Accept or decline bookings  
+- View earnings and reviews  
+
+### 🧑 Customer
+- Search nearby workers  
+- View worker profiles  
+- Book services  
+- Call workers directly  
+- Rate and review services  
+
+---
+
+## 🏗️ Features
+
+### 🔐 Authentication
+- Email & Password based login  
+- Secure authentication using Firebase  
+
+### 👤 Profile Management
+- Worker and customer profiles  
+- Portfolio image uploads  
+- Real-time updates  
+
+### 🔍 Search & Filter
+- Search workers by skill  
+- Filter by distance, rating, and availability  
+
+### 📅 Booking System
+- Schedule services  
+- Track booking status (Pending, Accepted, Completed)  
+
+### ⭐ Ratings & Reviews
+- Rate workers from 1–5  
+- Provide feedback  
+
+### 📍 Location-Based Services
+- Find nearby workers  
+- Integrated with Google Maps  
+
+### 📞 Communication
+- Direct call to workers  
+
+### 🔔 Notifications
+- Booking alerts  
+- Status updates  
+
+---
+
+## 🧑‍💻 Tech Stack
+
+### 📱 Frontend
+- Kotlin  
+- XML (Material Design)  
+- MVVM Architecture  
+
+### ☁️ Backend
+- Firebase Authentication (Email/Password)  
+- Cloud Firestore  
+- Firebase Storage  
+- Firebase Cloud Messaging  
+
+### 📍 Libraries & APIs
+- Google Maps API  
+- GeoFirestore  
+- Glide  
+- Kotlin Coroutines  
+
+---
+
+## 📂 Project Structure
 com.nammakelsa
 │
 ├── data/
@@ -89,66 +109,95 @@ com.nammakelsa
 ├── viewmodel/        # Business logic (MVVM)
 │
 └── utils/            # Helper classes
-🔄 Workflow
-User selects role (Worker / Customer)
-Login using Email & Password
-Profile setup (first-time users)
-Customer searches workers
-Customer books service
-Worker accepts/rejects booking
-Job completed
-Customer gives rating & review
-🗄️ Database Schema (Firestore)
-📁 Collections
-1. users
--uid
--name
--email
--userType (worker/customer)
-2. workers
--uid
--skill
--experience
--dailyRate
--location (GeoPoint)
--isAvailable
--rating
-3. bookings
--bookingId
--workerId
--customerId
--date & time
--status
--totalPrice
-4. reviews
--reviewId
--workerId
--customerId
--rating
--comment
 
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+---
+
+## 🔄 Workflow
+
+1. User selects role (Worker / Customer)  
+2. Login using Email & Password  
+3. Setup profile  
+4. Customer searches workers  
+5. Customer books service  
+6. Worker accepts or rejects  
+7. Job completion  
+8. Customer gives rating  
+
+---
+
+## 🗄️ Database Schema
+
+### Users Collection
+- uid  
+- name  
+- email  
+- userType  
+
+### Workers Collection
+- uid  
+- skill  
+- experience  
+- dailyRate  
+- location  
+- availability  
+- rating  
+
+### Bookings Collection
+- bookingId  
+- workerId  
+- customerId  
+- date  
+- time  
+- status  
+- amount  
+
+### Reviews Collection
+- reviewId  
+- workerId  
+- customerId  
+- rating  
+- reviewText  
+
+---
+
+## ⚙️ Installation
+
+### Clone the repository
 git clone https://github.com/your-username/namma-kelsa.git
-2️⃣ Open in Android Studio
-3️⃣ Firebase Setup
-Create project in Firebase Console
-Add google-services.json to /app
-Enable:
-Authentication (Email/Password)
-Firestore
-Storage
-4️⃣ Run App
-Click Run  in Android Studio
-✅ Testing
-User login/logout
-Worker availability toggle
-Booking flow
-Real-time updates
-Notifications
-🚀 Future Enhancements
-💬 In-app chat system
-🤖 AI-based worker recommendations
-📊 Worker analytics dashboard
 
-Namma-Kelsa simplifies the process of finding skilled workers by providing a transparent, efficient, and real-time platform. It empowers workers digitally while offering customers a seamless service experience.
+### Open in Android Studio
+
+### Setup Firebase
+- Add `google-services.json`
+- Enable Authentication (Email/Password)
+- Enable Firestore and Storage
+
+### Run the app
+Click ▶️ Run in Android Studio
+
+---
+
+## 🧪 Testing
+
+- Login & Registration  
+- Booking workflow  
+- Real-time updates  
+- Notifications  
+
+---
+
+## 🚀 Future Enhancements
+
+- In-app chat  
+- Payment integration  
+- AI-based recommendations  
+- Multi-language support  
+
+---
+
+## 📊 Conclusion
+
+Namma-Kelsa provides a simple and efficient solution to connect customers with skilled workers, ensuring transparency, fair pricing, and ease of use.
+
+
+
